@@ -1,0 +1,5270 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style> <!-- Style for Environment Configuration -->
+table {
+border-collapse: collapse;
+border: 1px solid;
+border-radius: 15px;
+}
+
+th, td {
+border-collapse: collapse;
+border: 1px solid;
+padding-left: 5px;
+}
+
+.headerMain {
+background-color: #083A6F;
+font-family: Calibri;
+color: #FFFFFF;
+text-align: center;
+font-weight: bold;
+padding-top: 15px;
+padding-bottom: 15px;
+position: relative;
+}
+
+.spanHeaderMain {
+vertical-align: middle;
+}
+
+.tableHeader {
+border-color: #cdcdcd;
+color: #000;
+background-color: #f1ebd8;
+font-family: Calibri;
+text-align: center;
+font-size: 15px;
+height: 25px;
+}
+
+.rowEven {	
+background-color: #ccccff;
+font-family:Calibri, sans-serif;
+text-align: left;
+font-size: 13px;
+padding-left: 2px;
+height: 25px;
+border-color: white;
+border: 1px solid;
+}
+
+.rowOdd {
+background-color: #cce6ff;
+<!--border-color: #cdcdcd;-->
+font-family:Calibri, sans-serif;
+text-align: left;
+font-size: 11px;
+padding-left: 2px;
+height: 25px;
+border-color: white;
+border: 1px solid;
+}
+
+.rowEvenFix {
+background-color: #ccccff;
+border-color: white;
+font-family:Calibri, sans-serif;
+text-align: left;
+font-size: 13px;
+height: 25px;
+border: 1px solid;
+}
+
+.rowOddFix {
+background-color: #cce6ff;
+border-color: white;
+font-family:Calibri, sans-serif;
+text-align: left;
+font-size: 13px;
+height: 25px;
+border: 1px solid;
+}
+
+.rowEvenFixlinks {
+background-color: #ccccff;
+border-color: white;
+font-family:Calibri, sans-serif;
+text-align: left;
+font-size: 16px;
+height: 30px;
+border: 1px solid;
+}
+
+.rowOddFixlinks {
+background-color: #cce6ff;
+border-color: white;
+font-family:Calibri, sans-serif;
+text-align: left;
+font-size: 16px;
+height: 30px;
+border: 1px solid;
+}
+
+.fixedTable {
+margin-top: 12px; 
+margin-left: 10px;
+}
+.wrapper {
+border-collapse: collapse;
+<!-- border: 1px solid black; -->
+margin-top: 12px; 
+margin-left: 10px;
+height:350px;
+}
+#div1{
+display: inline-block;
+width:600px;
+height:250px;
+<!-- border: 1px solid black; -->
+vertical-align: top;
+margin-top: 15px; 
+margin-left: 10px;
+}
+
+
+.XYZflag {
+color: #008000;
+}
+
+.bronze {
+background-color: #FFB685;
+font-family:Calibri, sans-serif;
+text-align: left;
+font-size: 13px;
+padding-left: 2px;
+height: 25px;
+border-color: white;
+border: 1px solid;
+}
+<!-- #div2{
+display: inline-block;
+width:300px;
+height:250px;
+border: 1px solid black;
+vertical-align: top;
+margin-top: 15px; 
+margin-left: 10px;
+}
+#div3{
+display: inline-block;
+width:300px;
+height:250px;
+border: 1px solid black;
+vertical-align: top;
+margin-top: 15px; 
+margin-left: 10px;
+}
+#div4{
+display: inline-block;
+width:300px;
+height:250px;
+border: 1px solid black;
+vertical-align: top;
+margin-top: 15px; 
+margin-left: 10px;
+} -->
+
+
+
+</style>
+
+<style> 
+#cssmenu,
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  font-family:Calibri, sans-serif;
+}
+#cssmenu {
+  width: auto;
+  height: 50px;
+  padding-bottom: 10px;
+  padding-top: 5px;
+}
+#cssmenu.align-right {
+  float: right;
+}
+#cssmenu.align-right ul li {
+  float: right;
+  margin-right: 0;
+  margin-left: 4px;
+}
+#cssmenu.align-right ul li:first-child,
+#cssmenu.align-right ul li:first-child > a {
+  border-bottom-right-radius: 3px;
+}
+#cssmenu #bg-one,
+#cssmenu #bg-two,
+#cssmenu #bg-three,
+#cssmenu #bg-four {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+#cssmenu #bg-one {
+  height: 10px;
+  background: #0f71ba;
+}
+#cssmenu #bg-two {
+  height: 50px;
+  z-index: 2;
+}
+#cssmenu #bg-three {
+  bottom: 4px;
+  height: 46px;
+  z-index: 3;
+  background: #222222;
+  background: -moz-linear-gradient(top, #555555 0%, #222222 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #555555), color-stop(100%, #222222));
+  background: -webkit-linear-gradient(top, #555555 0%, #222222 100%);
+  background: -o-linear-gradient(top, #555555 0%, #222222 100%);
+  background: -ms-linear-gradient(top, #555555 0%, #222222 100%);
+  background: linear-gradient(to bottom, #555555 0%, #222222 100%);
+}
+#cssmenu #bg-four {
+  bottom: 4px;
+  height: 46px;
+  z-index: 4;
+}
+#cssmenu ul {
+  height: 50px;
+}
+#cssmenu ul li {
+  float: left;
+  margin-right: 4px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  z-index: 5;
+}
+#cssmenu ul li a {
+  padding: 25px 30px 20px 30px;
+  <!--margin-bottom: 1px;-->
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  color: #eeeeee;
+  font-size: 15px;
+  text-decoration: none;
+}
+#cssmenu ul li:first-child,
+#cssmenu ul li:first-child > a {
+  border-bottom-left-radius: 3px;
+}
+#cssmenu ul li:hover,
+#cssmenu ul li.active {
+  background: #0f71ba;
+  background: -moz-linear-gradient(top, #3fa4f0 0%, #0f71ba 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3fa4f0), color-stop(100%, #0f71ba));
+  background: -webkit-linear-gradient(top, #3fa4f0 0%, #0f71ba 100%);
+  background: -o-linear-gradient(top, #3fa4f0 0%, #0f71ba 100%);
+  background: -ms-linear-gradient(top, #3fa4f0 0%, #0f71ba 100%);
+  background: linear-gradient(to bottom, #3fa4f0 0%, #0f71ba 100%);
+}
+#cssmenu ul li a:hover,
+#cssmenu ul li.active > a {
+  color: #ffffff;
+}
+.tab-content.active{
+   display: block;
+}
+
+.tab-content.hide{
+   display: none;
+}
+</style>
+<style>
+
+table {
+    border-collapse: collapse;
+}
+
+table, td, th {
+    border: 1px solid black;
+}
+
+th {
+	width: 100px;
+}
+
+.envPlanTableHeader{
+	text-align: center;
+	color: #00008B;
+	border: hidden;
+	font-weight: bold;
+	height: 20px;
+	border: hidden;
+	color: #00008B;
+	font-size: 18px;
+	font-family:Calibri, sans-serif;
+}
+
+.evenHeader{
+	width: 70px;
+	background-color: white;
+    border-color: white;
+	text-align: center;
+	color: #00008B;
+	font-family:Calibri, sans-seriff;
+	font-size: 12px;
+}
+
+.rowColor0 {
+	background-color: #7794C0;
+	height: 25px;
+	border: hidden;
+	margin-top: 1px;
+}
+
+.rowColor1 {
+	background-color: #ccccff;
+	height: 25px;
+	border: hidden;
+	margin-top: 1px;
+}
+
+.rowColor2 {
+	background-color: #a6bddf;
+	height: 25px;
+	border: hidden;
+	margin-top: 1px;
+}
+
+.rowColor3 {
+	background-color: #cce6ff;
+	height: 25px;
+	border: hidden;
+	margin-top: 1px;
+}
+
+.rowColor4 {
+	background-color: #d9e3ec;
+	height: 25px;
+	border: hidden;
+	margin-top: 1px;
+}
+
+.rowColor5 {
+	background-color: #e7ebf7;
+	height: 25px;
+	border: hidden;
+	padding-top: 5px;
+}
+
+#envPlanDiv {
+	border: 2px dashed black;
+	height: 400px;
+	margin-top: 20px;
+	margin-left: 50px;
+	width: 1100px;
+	border-radius: 25px;
+}
+
+.buildStreamDiv {
+	height: 15px;
+	text-align: center;
+	background-color: #558000;
+	border: hidden;
+	margin-top: 1px;
+	font-family:Calibri, sans-serif;
+	text-align: center;
+	font-size: 12px;
+	color: white;
+}
+
+.uatStreamDiv {
+	height: 15px;
+	text-align: center;
+	background-color: #223300;
+	border: hidden;
+	margin-top: 1px;
+	font-family:Calibri, sans-serif;
+	text-align: center;
+	font-size: 12px;
+	color: white;
+}
+
+#prodStreamEnvPlan {
+	border: 2px dashed black;
+	height: 280px;
+	margin-top: 20px;
+	margin-left: 50px;
+	width: 1100px;
+	border-radius: 25px;
+}
+
+.prodStream {
+	height: 15px;
+	text-align: center;
+	background-color: #77b300;
+	border: hidden;
+	margin-top: 1px;
+	font-family:Calibri, sans-serif;
+	text-align: center;
+	font-size: 12px;
+	color: white;
+}
+
+.envColHeaders{
+	font-family:Calibri, sans-serif;
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+	height: 20px;
+	border: hidden;
+	color: #604020;
+}
+
+.envBlockContents{
+	font-family:Calibri, sans-serif;
+	text-align: center;
+	font-size: 12px;
+
+	border: hidden;
+	color: #00004d;
+}
+</style>
+<title>XYZ Micro-service </title>
+</head>
+<body>
+<div class = "headerMain">
+	<span class="spanHeaderMain">XYZ Micro-service</span>
+</div>
+
+<div id='cssmenu'>
+<ul class="nav-tabs">
+   <li class="active"><a href='#environmentPlanMainTab'><span>Environment Plan</span></a></li>
+   <li><a href='#environmentConfigurationMainTab'><span>Environment Configuration</span></a></li>
+   <li><a href='#pcfMicroServicesTab'><span>Services/Apps</span></a></li>
+   <li><a href='#referencesMainTab'><span>References</span></a></li>
+   <li class='last'><a href="#contactUsMainTab"><span>Contact Us</span></a></li>
+</ul>
+</div>
+<br>
+<section id="environmentPlanMainTab" class="tab-content active">
+<div id="envPlanDiv">
+	<table id="headerTable" style="margin-top: 10px; margin-left: 80px;">
+			<tbody><tr><td colspan="10" class="envPlanTableHeader" >
+			Environment Plan - Major release Path</td></tr><tr><td colspan="20" class="envPlanTableHeader">&nbsp;</td></tr>
+				<tr>
+					<th class="evenHeader" ></th>
+					<th class="envColHeaders">DEV</th>
+					<th class="evenHeader">=></th>
+					<th class="envColHeaders">SIT</th>
+					<th class="evenHeader">=></th>
+					<th class="envColHeaders">UAT</th>
+					<th class="evenHeader">=></th>
+					<th class="envColHeaders">Stress</th>
+					<th class="evenHeader">=></th>
+					<th class="envColHeaders">Prod</th>
+				</tr>											
+			</tbody>			
+	</table>
+	<table style="margin-left: 80px;">
+			<tbody>
+				<tr class="rowColor1"><div>
+					<th class="evenHeader" height="30">Eclipse</th>
+					<th class="envBlockContents">&nbsp;</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents" style="cursor: pointer;" onclick="window.open('https://sit.com');">SIT2</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents" style="cursor: pointer;" onclick="window.open('https://https://sit.com');">UAT2</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents" style="cursor: pointer;" onclick="window.open('https://sit.com/');">Stress2</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents" style="cursor: pointer;" onclick="window.open('https://sit.com');">XYZ</th>
+					</div>
+				</tr>
+				<tr class="rowColor3"><div>
+					<th class="evenHeader"height="30">Salesforce</th>
+					<th class="envBlockContents">*DEV(Release-Month)</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents">SIT1</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents">U1UAT2</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents">PERF</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents">XYZ</th><div>
+				</tr>
+				<tr class="rowColor1"><div>
+					<th class="evenHeader"height="30">Avoka UI</th>
+					<th class="envBlockContents">DEV3</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents">DEV2</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents">UAT3</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents">PERF</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents">XYZ</th>
+					</div>
+				</tr>
+				<tr class="rowColor3"><div>
+					<th class="evenHeader"height="30">APIM</th>
+					<th class="envBlockContents">DEV</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents">SIT</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents">UAT3</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents">PERF</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents">XYZ</th><div>
+				</tr>
+				<tr class="rowColor1">
+				<div>
+					<th class="evenHeader">PSG</th>
+					<th class="envBlockContents"height="40">DEV3</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents"height="40">DEV2</th>
+					<th class="evenHeader" ></th>
+					<th class="envBlockContents" height="40">UAT3</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents" height="40">PERF</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents" height="50">XYZ,<br>XYZ</th>
+					</div>
+				</tr>
+				<tr class="rowColor3">
+				<div>
+					<th class="evenHeader">Avoka API</th>
+					<th class="envBlockContents"height="40">DEV3</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents"height="40">DEV2</th>
+					<th class="evenHeader" ></th>
+					<th class="envBlockContents" height="40">UAT3</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents" height="40">PERF</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents" height="50">XYZ,<br>XYZ</th>
+					</div>
+				</tr>
+				<tr class="rowColor1">
+				<div>
+					<th class="evenHeader"height="40">Legacy</th>
+					<th class="envBlockContents">I1</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents">I1</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents">U1</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents">HSYSC2</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents">ASYS(P)/GSYS</th>
+					</div>
+				</tr>
+				<tr class="rowColor3">
+				<div>
+					<th class="evenHeader">XYX</th>
+					<th class="envBlockContents">XYX</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents">XYX</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents">XYX</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents">XYX</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents">XYX</th>
+					</div>
+				</tr>
+				 <!--<tr style="border: hidden;"><td colspan="10" class="envPlanTableHeader">&nbsp;</td></tr>
+				<tr style="border: hidden;"><td>&nbsp;</td><td colspan="7" class="buildStreamDiv">
+					Bitbucket - release/yy.mm branch
+				</td>
+				</tr><tr style="border: hidden;"><td style="border: hidden;"></td></tr>
+				<tr style="border: hidden;"><td>&nbsp;</td><td colspan="9" class="uatStreamDiv">Bitbucket - release/yy.mm branch</td>
+				</tr> --> 
+			</tbody>			
+	  </table>
+</div>
+
+<div id="prodStreamEnvPlan" style="height: 100%;">
+	<table id="prodHeaderTable" align = "center" style="margin-top: 30px;margin-left: 180px;">
+			<tbody>
+			<tr><td colspan="8" class="envPlanTableHeader" >
+			Environment Plan - Minor/Monthly release Path</td></tr><tr><td colspan="8" class="envPlanTableHeader">&nbsp;</td></tr>
+				<tr>
+					<th class="evenHeader" ></th>
+					<th class="envColHeaders"height="30">DEV</th>
+					<th class="evenHeader">=></th>
+					<th class="envColHeaders">UAT</th>
+					<th class="evenHeader">=></th>
+					<th class="envColHeaders">Stress</th>
+					<th class="evenHeader">=></th>
+					<th class="envColHeaders">Prod</th>
+				</tr>											
+			</tbody>			
+	</table>
+	<table style="margin-left: 180px;">
+			<tbody>
+				<tr class="rowColor1"><div>
+					<th class="evenHeader">Eclipse</th>
+					<th class="envBlockContents"height="30">&nbsp;</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents" style="cursor: pointer;" onclick="window.open('https://sit.com');">UAT1</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents" style="cursor: pointer;" onclick="window.open('https://sit.com');">Stress2</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents" style="cursor: pointer;" onclick="window.open('https://sit.com');">XYZ</th>
+					</div>
+				</tr>
+				<tr class="rowColor3"><div>
+					<th class="evenHeader"height="30">Salesforce</th>
+					<th class="envBlockContents">*DEV(Release-Month)</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents">U1UAT2</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents">PERF</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents">XYZ</th><div>
+				</tr>
+				<tr class="rowColor1"><div>
+					<th class="evenHeader">Avoka UI</th>
+					<th class="envBlockContents"height="30">DIT</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents">UAT2</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents">PERF</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents">XYZ</th>
+					</div>
+				</tr>
+				<tr class="rowColor3"><div>
+					<th class="evenHeader">APIM</th>
+					<th class="envBlockContents"height="30">DEV1</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents">DEV1</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents">DEV1</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents">DEV1</th>
+				</tr>
+				<tr class="rowColor1">
+				<div>
+					<th class="evenHeader">PSG</th>
+					<th class="envBlockContents"height="40">DEV1</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents" height="40">DEV1/<br>DEV1</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents" height="40">DEV1</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents" height="60">DEV1,<br>DEV1</th>
+					</div>
+				</tr>
+				<tr class="rowColor3">
+				<div>
+					<th class="evenHeader">Avoka API</th>
+					<th class="envBlockContents"height="40">DEV1</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents" height="40">DEV1/<br>DEV1</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents" height="40">DEV1</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents" height="60">DEV1,<br>DEV1</th>
+					</div>
+				</tr>
+				<tr class="rowColor1">
+				<div>
+					<th class="evenHeader">Legacy</th>
+					<th class="envBlockContents"height="40">I1</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents">U2</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents">HSYSC2</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents">ASYS(P)/GSYS</th>
+					</div>
+				</tr>
+				<tr class="rowColor3">
+				<div>
+					<th class="evenHeader">DBSales</th>
+					<th class="envBlockContents">DBSALESD</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents">DBUAT2</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents">DBUAT1</th>
+					<th class="evenHeader"></th>
+					<th class="envBlockContents">DB02</th>
+					</div>
+				</tr>
+				 <!--<tr><td colspan="10" class="envPlanTableHeader">&nbsp;</td></tr>
+				<tr style="border: hidden;"><td>&nbsp;</td><td colspan="7" class="prodStream">
+					Bitbucket - release/yy.mm branch - minor release
+				</td>
+				</tr>
+				<tr style="border: hidden;"><td style="border: hidden;"></td></tr>
+				<tr style="border: hidden;"><td>&nbsp;</td><td colspan="9" class="uatStreamDiv">Bitbucket - master - Production support</td>
+				</tr>-->
+				<tr><td colspan="10" class="envPlanTableHeader">&nbsp;</td></tr> 				
+			</tbody>			
+	  </table>	 
+</div>
+</section>
+<section id="environmentConfigurationMainTab" class="tab-content hide">
+   <div style="position: relative;">
+		<div id="environmentConfiguration" style="overflow:auto;">
+			<ul style="font-size: 13px;">
+				<!--<li><a href="#tabs-1" id="dev">PCF1-DEV</a></li>
+				<li><a href="#tabs-2" id="sit">&nbsp;SIT&nbsp;</a></li>
+				<li><a href="#tabs-3" id="uat"><strong>PCF1-UAT</strong></a></li>
+				<li><a href="#tabs-4" id="perf"><strong>PCF1-PERF</strong></a></li>
+				<li><a href="#tabs-5" id="prod"><strong>PCF1-XYZ</strong></a></li>-->
+				<li><a href="#tabs-6" id="dev1"><strong>PCF2-DEV</strong></a></li>
+				<li><a href="#tabs-7" id="uat1"><strong>PCF2-UAT</strong></a></li>
+				<li><a href="#tabs-8" id="perf1"><strong>PCF2-PERF</strong></a></li>
+				<li><a href="#tabs-9" id="prod1"><strong>PCF2-XYZ</strong></a></li>
+			</ul>
+			<!-- <div  id="devBasedTable" class="fixedTable">
+			  <table  width = "70%;" align = "left">
+					<tbody>
+						<tr class="tableHeader">
+							<th>Application</th>
+							<th colspan = "2">End Point URL - DEV</th>
+						</tr>
+						<tr class="rowEvenFix">
+							<td style="background-color: #90add9;">PCF</td>
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>
+						<tr class="rowOddFix">
+							<td rowspan="2" style="background-color: #90add9;">Splunk</td>
+							<td>Login url :</td>
+							<td><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>	
+						
+						<tr class="rowEvenFix">							
+							<td>AD Group :</td>
+							<td>int_gcg_nam_platform_nonprod</td>
+						</tr>
+						<tr class="rowOddFix">	
+							<td rowspan="2" style="background-color: #90add9;">AppDynamics</td>						
+							<td>Application Name :</td>
+							<td>xyz_xyz/</td>
+						</tr>
+						<tr class="rowEvenFix">							
+							<td>Controller Name :</td>
+							<td><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>
+						<tr class="rowOddFix">
+							<td style="background-color: #90add9;">Splunk Non-Prod</td>
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>
+						<tr class="rowEvenFix">
+							<td style="background-color: #90add9;">APIM SIT</td>
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>
+						<tr class="rowOddFix">
+							<td style="background-color: #90add9;">ESB</td>
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com/</a></td>
+						</tr>
+						
+						
+						<tr class="rowOddFix">
+							<td style="background-color: #90add9;">Swagger UI</td>						
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>
+						<tr class="rowEvenFix">
+							<td style="background-color: #90add9;">SFDC SIT</td>
+							<td colspan="2"><a target="_blank" </a></td>
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com</a></td> 
+						</tr>
+						<tr class="rowOddFix">
+							<td style="background-color: #90add9;">APIm DEV</td>						
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr
+					</tbody>
+			  </table>
+			   <br><br><br><br><br>
+			</div> -->
+			<!--
+			<div id="sitBasedTable" class="fixedTable">
+			  <table  width = "70%;" align = "left">
+					<tbody>
+						<tr class="tableHeader">
+							<th>Application</th>
+							<th colspan = "2">End Point URL - SIT</th>
+						</tr>
+						<tr class="rowEvenFix">
+							<td style="background-color: #90add9;">PCF</td>
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>
+						<tr class="rowOddFix">
+							<td rowspan="2" style="background-color: #90add9;">Splunk</td>
+							<td>Login url :</td>
+							<td><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>	
+						<tr class="rowEvenFix">							
+							<td>AD Group :</td>
+							<td>int_gcg_nam_platform_nonprod</td>
+						</tr>
+						<tr class="rowOddFix">
+							<td rowspan="4" style="background-color: #90add9;">AppDynamics</td>
+							<td>AD Group :</td>
+							<td>app_appdyn_169688_FintechMobile_uat_read,app_app_appdynxyzs_uat</td>
+						</tr>
+						<tr class="rowEvenFix">							
+							<td>Application Name :</td>
+							<td>169688_Fintech_MOB_NAM_SIT</td>
+						</tr>
+						<tr class="rowOddFix">							
+							<td>Controller Name :</td>
+							<td><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>
+						<tr class="rowEvenFix">							
+							<td>Port No. :</td>
+							<td>8181</td>
+						</tr>	
+											
+					</tbody>
+			  </table>
+			</div>
+			-->
+			<!--<div id="uatBasedTable" class="fixedTable">
+			  <table  width = "70%;" align = "left">
+					<tbody>
+						<tr class="tableHeader">
+							<th>Application</th>
+							<th colspan = "2">End Point URL - UAT</th>
+						</tr>
+						<tr class="rowEvenFix">
+							<td style="background-color: #90add9;">PCF</td>
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>
+						<tr class="rowOddFix">
+							<td rowspan="2" style="background-color: #90add9;">Splunk</td>
+							<td>Login url :</td>
+							<td><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>	
+						<tr class="rowEvenFix">							
+							<td>AD Group :</td>
+							<td>int_gcg_nam_platform_nonprod</td>
+						</tr>
+						<tr class="rowOddFix">
+							<td rowspan="3" style="background-color: #90add9;">AppDynamics</td>
+							<td>AD Group :</td>
+							<td>app_appdyn_169688_FintechMobile_uat_read,app_app_appdynxyzs_uat</td>
+						</tr>
+						<tr class="rowOddFix">	
+							<td rowspan="2" style="background-color: #90add9;">AppDynamics</td>						
+							<td>Application Name :</td>
+							<td>xyz_xyz/</td>
+						</tr>
+						<tr class="rowEvenFix">							
+							<td>Controller Name :</td>
+							<td><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>
+						<tr class="rowOddFix">
+							<td style="background-color: #90add9;">Splunk Non-Prod</td>
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>
+						<tr class="rowEvenFix">
+							<td style="background-color: #90add9;">APIM SIT</td>
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>
+						<tr class="rowOddFix">
+							<td style="background-color: #90add9;">ESB</td>
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>
+						<tr class="rowOddFix">
+							<td style="background-color: #90add9;">SFDC UAT</td>	
+								<td colspan="2"><a target="_blank" </a></td>
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						
+						<tr class="rowEvenFix">							
+							<td>Port No. :</td>
+							<td>8181</td>
+						</tr>
+						<tr class="rowEvenFix">
+							<td style="background-color: #90add9;">C3 URL</td>						
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com</a>   "Close Browser after use"</td>
+						</tr>		
+					</tbody>
+			  </table>
+			</div>-->
+		<!--	
+			<div id="perfBasedTable" class="fixedTable">
+			  <table  width = "70%;" align = "left">
+					<tbody>
+						<tr class="tableHeader">
+							<th>Application</th>
+							<th colspan = "2">End Point URL - PERF</th>
+						</tr>
+						<tr class="rowEvenFix">
+							<td style="background-color: #90add9;">PCF</td>
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>
+						<tr class="rowOddFix">
+							<td rowspan="2" style="background-color: #90add9;">Splunk</td>
+							<td>Login url :</td>
+							<td><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>	
+						<tr class="rowEvenFix">							
+							<td>AD Group :</td>
+							<td>int_gcg_nam_pcf_application_perf</td>
+						</tr>
+						<tr class="rowOddFix">
+							<td rowspan="4" style="background-color: #90add9;">AppDynamics</td>
+							<td>AD Group :</td>
+							<td>app_appdyn_169688_FintechMobile_uat_read,app_app_appdynxyzs_uat</td>
+						</tr>
+						<tr class="rowOddFix">	
+							<td rowspan="2" style="background-color: #90add9;">AppDynamics</td>						
+							<td>Application Name :</td>
+							<td>xyz_xyz/</td>
+						</tr>
+						<tr class="rowEvenFix">							
+							<td>Controller Name :</td>
+							<td><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>
+						<tr class="rowOddFix">
+							<td style="background-color: #90add9;">Splunk Non-Prod</td>
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>
+						<tr class="rowEvenFix">
+							<td style="background-color: #90add9;">APIM PERF</td>
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>
+						<tr class="rowOddFix">
+							<td style="background-color: #90add9;">ESB</td>
+							<td colspan="2"><a target="_blank" href="https://sit.com ">https://sit.com </a></td>
+						</tr>
+						
+						<!--<tr class="rowEvenFix">							
+							<td>Port No. :</td>
+							<td>8181</td>
+						</tr>	-->	
+						<!--<tr class="rowOddFix">
+							<td style="background-color: #90add9;">APIm PERF</td>
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>	
+						<tr class="rowEvenFix">
+							<td style="background-color: #90add9;">C3 URL</td>						
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com</a>   "Close Browser after use"</td>
+						</tr>				
+					</tbody>
+			  </table>
+			</div>
+			
+			<div id="prodBasedTable" class="fixedTable">
+			  <table  width = "70%;" align = "left">
+					<tbody>
+						<tr class="tableHeader">
+							<th>Application</th>
+							<th colspan = "2">End Point URL - XYZ</th>
+						</tr>
+						<tr class="rowOddFix">
+							<td rowspan="2" style="background-color: #90add9;">PCF</td>
+							<td>GT URL :</td>
+							<td><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>	
+						
+						<tr class="rowEvenFix">							
+							<td>SW URL :</td>
+							<td><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>
+						<!--<tr class="rowOddFix">
+							<td style="background-color: #90add9;">Splunk</td>
+							<td>AD Group :</td>
+							<td>int_gcg_nam_pcf_application_prod</td>
+						</tr>
+						<!--<tr class="rowEvenFix">
+							<td rowspan="4" style="background-color: #90add9;">AppDynamics</td>
+							<td>AD Group :</td>
+							<td>app_appdyn_169688_FintechMobile_prod_read, app_appdynxyzs_prod</td>
+						</tr>
+						<tr class="rowEvenFix">
+							<td rowspan="2" style="background-color: #90add9;">AppDynamics</td>						
+							<td>Application Name :</td>
+							<td>xyz_USRao</td>
+						</tr>
+						<tr class="rowOddFix">							
+							<td>Controller Name :</td>
+							<td><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>
+						<tr class="rowEvenFix">
+							<td style="background-color: #90add9;">Splunk Prod</td>
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>
+						<tr class="rowOddFix">
+							<td style="background-color: #90add9;">APIM XYZ</td>
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>
+						<tr class="rowEvenFix">
+							<td style="background-color: #90add9;">ESB</td>
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com </a></td>
+						</tr>
+						
+						<!--<tr class="rowOddFix">							
+							<td>Port No. :</td>
+							<td>8181</td>
+						</tr>
+						<tr class="rowEvenFix">
+							<td style="background-color: #90add9;">PSG LB url</td>
+							<td colspan="2">https://sit.com</td>
+						</tr>
+						<tr class="rowOddFix">
+							<td style="background-color: #90add9;">C3 URL</td>						
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com</a>  "Close Browser after use"</td>
+						</tr>
+						<tr class="rowEvenFix">
+							<td style="background-color: #90add9;">COB C3 URL</td>						
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com</a>  "Close Browser after use"</td>
+						</tr>
+					</tbody>
+			  </table>
+			</div>
+
+			
+			-->
+			
+			<!-- PCF2  -->
+			
+			<div  id="devBasedTable1" class="fixedTable">
+			  <table  width = "70%;" align = "left">
+					<tbody>
+						<tr class="tableHeader">
+							<th>Application</th>
+							<th colspan = "2">End Point URL - GT1DMSDEV</th>
+						</tr>
+						<tr class="rowOddFix">
+							<td rowspan="2" style="background-color: #90add9;">PCF2</td>
+							<td>GT URL :</td>
+							<td><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>	
+						
+						<tr class="rowEvenFix">							
+							<td>SW URL :</td>
+							<td><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>
+						<!--<tr class="rowOddFix">
+							<td rowspan="2" style="background-color: #90add9;">Splunk</td>
+							<td>Login url :</td>
+							<td><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>	
+						
+						<tr class="rowEvenFix">							
+							<td>AD Group :</td>
+							<td>int_gcg_nam_platform_nonprod</td>
+						</tr>-->
+						<tr class="rowOddFix">	
+							<td rowspan="2" style="background-color: #90add9;">AppDynamics</td>						
+							<td>Application Name :</td>
+							<td>xyz_xyz/</td>
+						</tr>
+						<tr class="rowEvenFix">							
+							<td>Controller Name :</td>
+							<td><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>
+						<tr class="rowOddFix">
+							<td style="background-color: #90add9;">Splunk Non-Prod</td>
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>
+						<tr class="rowEvenFix">
+							<td style="background-color: #90add9;">APIM SIT</td>
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>
+						<tr class="rowOddFix">
+							<td style="background-color: #90add9;">ESB</td>
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>
+						
+						<!--<tr class="rowOddFix">
+							<td style="background-color: #90add9;">Swagger UI</td>						
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>
+						<tr class="rowEvenFix">
+							<td style="background-color: #90add9;">SFDC SIT</td>
+							<td colspan="2"><a target="_blank" </a></td>
+							<!--<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>
+						<tr class="rowOddFix">
+							<td style="background-color: #90add9;">APIm DEV</td>						
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>-->
+					</tbody>
+			  </table>
+			  <!-- <br><br><br><br><br> -->
+			</div>
+
+			
+			
+			<div id="uatBasedTable1" class="fixedTable">
+			  <table  width = "70%;" align = "left">
+					<tbody>
+						<tr class="tableHeader">
+							<th>Application</th>
+							<th colspan = "2">End Point URL - GT1DMSUAT</th>
+						</tr>
+						<tr class="rowOddFix">
+							<td rowspan="2" style="background-color: #90add9;">PCF2</td>
+							<td>GT URL :</td>
+							<td><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>	
+						
+						<tr class="rowEvenFix">							
+							<td>SW URL :</td>
+							<td><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>
+						<!--<tr class="rowOddFix">
+							<td rowspan="2" style="background-color: #90add9;">Splunk</td>
+							<td>Login url :</td>
+							<td><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>	
+						<tr class="rowEvenFix">							
+							<td>AD Group :</td>
+							<td>int_gcg_nam_platform_nonprod</td>
+						</tr>
+						<!--<tr class="rowOddFix">
+							<td rowspan="3" style="background-color: #90add9;">AppDynamics</td>
+							<td>AD Group :</td>
+							<td>app_appdyn_169688_FintechMobile_uat_read,app_app_appdynxyzs_uat</td>
+						</tr>-->
+						<tr class="rowOddFix">	
+							<td rowspan="2" style="background-color: #90add9;">AppDynamics</td>						
+							<td>Application Name :</td>
+							<td>xyz_xyz/</td>
+						</tr>
+						<tr class="rowEvenFix">							
+							<td>Controller Name :</td>
+							<td><a target="_blank" href="https://sit.com#">https://sit.com#</a></td>
+						</tr>
+						<tr class="rowOddFix">
+							<td style="background-color: #90add9;">Splunk Non-Prod</td>
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>
+						<!--<tr class="rowOddFix">
+							<td style="background-color: #90add9;">SFDC UAT</td>	
+								<td colspan="2"><a target="_blank" </a></td>
+							<!--<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com</a></td>-->
+						<tr class="rowEvenFix">
+							<td style="background-color: #90add9;">APIM SIT</td>
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>
+						<tr class="rowOddFix">
+							<td style="background-color: #90add9;">ESB</td>
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>
+						
+						<!--<tr class="rowEvenFix">							
+							<td>Port No. :</td>
+							<td>8181</td>
+						</tr>	
+						<tr class="rowEvenFix">
+							<td style="background-color: #90add9;">C3 URL</td>						
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com</a>   "Close Browser after use"</td>
+						</tr>-->			
+					</tbody>
+			  </table>
+			</div>
+			
+			<div id="perfBasedTable1" class="fixedTable">
+			  <table  width = "70%;" align = "left">
+					<tbody>
+						<tr class="tableHeader">
+							<th>Application</th>
+							<th colspan = "2">End Point URL - GT1DMSPERF</th>
+						</tr>
+						<tr class="rowOddFix">
+							<td rowspan="2" style="background-color: #90add9;">PCF2</td>
+							<td>GT URL :</td>
+							<td><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>	
+						
+						<tr class="rowEvenFix">							
+							<td>SW URL :</td>
+							<td><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>
+						<!--<tr class="rowOddFix">
+							<td rowspan="2" style="background-color: #90add9;">Splunk</td>
+							<td>Login url :</td>
+							<td><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>	
+						<tr class="rowEvenFix">							
+							<td>AD Group :</td>
+							<td>int_gcg_nam_pcf_application_perf</td>
+						</tr>
+						<!--<tr class="rowOddFix">
+							<td rowspan="4" style="background-color: #90add9;">AppDynamics</td>
+							<td>AD Group :</td>
+							<td>app_appdyn_169688_FintechMobile_uat_read,app_app_appdynxyzs_uat</td>
+						</tr>-->
+						<tr class="rowOddFix">	
+							<td rowspan="2" style="background-color: #90add9;">AppDynamics</td>						
+							<td>Application Name :</td>
+							<td>xyz_xyz</td>
+						</tr>
+						<tr class="rowEvenFix">							
+							<td>Url:</td>
+							<td><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>
+						<tr class="rowOddFix">
+							<td style="background-color: #90add9;">Splunk Non-Prod</td>
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>
+						<tr class="rowEvenFix">
+							<td style="background-color: #90add9;">APIM PERF</td>
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>
+						<tr class="rowOddFix">
+							<td style="background-color: #90add9;">ESB</td>
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com </a></td>
+						</tr>
+						
+						<!--<tr class="rowEvenFix">							
+							<td>Port No. :</td>
+							<td>8181</td>
+						</tr>	
+						<tr class="rowOddFix">
+							<td style="background-color: #90add9;">APIm PERF</td>
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>	
+						<tr class="rowEvenFix">
+							<td style="background-color: #90add9;">C3 URL</td>						
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com</a>   "Close Browser after use"</td>
+						</tr>	-->				
+					</tbody>
+			  </table>
+			</div>
+			
+			<div id="prodBasedTable1" class="fixedTable">
+			  <table  width = "70%;" align = "left">
+					<tbody>
+						<tr class="tableHeader">
+							<th>Application</th>
+							<th colspan = "2">End Point URL - GT1DMSXYZ</th>
+						</tr>
+						<tr class="rowOddFix">
+							<td rowspan="2" style="background-color: #90add9;">PCF2</td>
+							<td>GT URL :</td>
+							<td><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>	
+						
+						<tr class="rowEvenFix">							
+							<td>SW URL :</td>
+							<td><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr>
+						<tr class="rowOddFix">
+							<td rowspan="2" style="background-color: #90add9;">AppDynamics</td>
+							<td>GT :</td>
+							<td>https://sit.com</td>
+						</tr>	
+						
+						<tr class="rowEvenFix">							
+							<td>SW :</td>
+							<td>https://sit.com</td>
+						</tr>
+						<tr class="rowOddFix">
+							<td style="background-color: #90add9;">Splunk XYZ</td>
+							<td colspan="2"><a target="_blank" href="https://sit.com</a></td>
+						</tr>
+						<tr class="rowEvenFix">
+							<td style="background-color: #90add9;">APIM XYZ</td>
+							<td colspan="2"><a target="_blank" href="https://sit.com</a></td>
+						</tr>
+						<tr class="rowOddFix">
+							<td style="background-color: #90add9;">ESB</td>
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com </a></td>
+						</tr>
+						
+						<!--<tr class="rowOddFix">
+							<td style="background-color: #90add9;">Splunk</td>
+							<td>AD Group :</td>
+							<td>int_gcg_nam_pcf_application_prod</td>
+						</tr>
+						<!--<tr class="rowEvenFix">
+							<td rowspan="4" style="background-color: #90add9;">AppDynamics</td>
+							<td>AD Group :</td>
+							<td>app_appdyn_169688_FintechMobile_prod_read, app_appdynxyzs_prod</td>
+						</tr>-->
+						<!--<tr class="rowEvenFix">
+							<td rowspan="2" style="background-color: #90add9;">AppDynamics</td>						
+							<td>Application Name :</td>
+							<td>xyz_xyz/</td>
+						</tr>
+						<tr class="rowOddFix">							
+							<td>Controller Name :</td>
+							<td><a target="_blank" href="https://sit.com#">https://sit.com#</a></td>
+						</tr>
+						<!--<tr class="rowOddFix">							
+							<td>Port No. :</td>
+							<td>8181</td>
+						</tr>
+						<tr class="rowEvenFix">
+							<td style="background-color: #90add9;">PSG LB url</td>
+							<td colspan="2">https://sit.com</td>
+						</tr>
+						<tr class="rowOddFix">
+							<td style="background-color: #90add9;">C3 URL</td>						
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com</a>  "Close Browser after use"</td>
+						</tr>
+						<tr class="rowEvenFix">
+							<td style="background-color: #90add9;">COB C3 URL</td>						
+							<td colspan="2"><a target="_blank" href="https://sit.com">https://sit.com</a>  "Close Browser after use"</td>
+						</tr>-->
+					</tbody>
+			  </table>
+			</div>
+
+			
+			
+			<!--
+			
+			<div id="tabs-1" style="margin-top:210px;">
+				<div id="tabs1" style="height:100%;font-size: 12px; position:relative;">
+						<ul>
+							<li><a href="#tabs-11">DEV 1</a></li>
+							<li><a href="#tabs-12">DEV 2</a></li>
+							<li><a href="#tabs-13">DEV 3</a></li>
+						</ul>
+						<div id="tabs-11" style="overflow:auto;">
+						<table border="1" width = "100%;" align = "centre">
+						<tbody>
+						<tr class="tableHeader">
+							<td style="font-weight: bold; width: 230px;">Application</td>
+							<td style="font-weight: bold;">End Point URL - DEV1</td>
+						</tr>
+						<tr class="rowEven">
+							<td>Avoka Eclipse</td>
+							<td></td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Avoka UI DEV1</td>
+							<td>https://sit.com</td>
+						</tr>
+						<!-- <tr class="rowEven">
+							<td>Swagger UI</td>
+							<td><a target="_blank" href="https://sit.com">https://sit.com</a></td>
+						</tr> 
+						<tr class="rowEven">
+							<td>Domain</td>
+							<td>cfapps</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>GCIF URL</td>
+							<td>https://sit.com</td>
+						</tr>
+						<tr class="rowEven">
+							<td>DB URL</td>
+							<td>xyz/USAVK1D</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>PSG Policy SVN</td>
+							<td>https://xyz.com/svn</td>
+						</tr>
+						<tr class="rowEven">
+							<td>PSG SVN</td>
+							<td>https://xyz.com/s</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Application Config SVN</td>
+							<td>https://xyz.com/svn/</td>
+						</tr>
+						<tr class="rowEven">
+							<td>PSG</td>
+							<td>http://dd</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Eureka RETAIL_BANK-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowEven">
+							<td>Eureka ASSISTED-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Config Server RETAIL_BANK-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowEven">
+							<td>Config Server ASSISTED-NAM</td>
+							<td></td>
+						</tr>
+						<!--<tr class="rowOdd">
+							<td>Eureka RETAIL_BANK-NAM</td>
+							<td>http://xyz.net</td>
+						</tr>
+						<!--<tr class="rowEven">
+							<td>Eureka ASSISTED-NAM</td>
+							<td>http://xyz.net</td>
+						</tr>-->
+						<!--<tr class="rowEven">
+							<td>Config Server RETAIL_BANK-NAM</td>
+							<td>http://xyz.net</td>
+						</tr>
+						<!--<tr class="rowEven">
+							<td>Config Server ASSISTED-NAM</td>
+							<td>http://xyz.net</td>
+						</tr>						
+					</tbody>
+				</table>
+				</div>
+				<div id="tabs-12" style="overflow:auto;">
+						<table border="1" width = "100%;" align = "centre">
+						<tbody>
+						<tr class="tableHeader">
+							<td style="font-weight: bold; width: 230px;">Application</td>
+							<td style="font-weight: bold;">End Point URL - DEV2</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Avoka Eclipse SIT2</td>
+							<td>https://xyz.net</td>
+						</tr>
+						<tr class="rowEven">
+							<td>Salesforce</td>
+							<td>https://xyz.app</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Avoka UI SIT2</td>
+							<td>SIT1 - https://xyz.net/xyzSmartForm.html</td>
+						</tr>
+						<!-- <tr class="rowEven">
+							<td>Swagger UI</td>
+							<td><a target="_blank" href="http://xyz.net/swagger-ui.html">http://xyz.net/swagger-ui.html</a></td>
+						</tr> 
+						<tr class="rowEven">
+							<td>Domain</td>
+							<td>xyz.net</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>GCIF URL</td>
+							<td>https://xyz.com</td>
+						</tr>
+						<tr class="rowEven">
+							<td>DB URL</td>
+							<td>xyz/USAVK1D</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>PSG Policy SVN</td>
+							<td>https://xyz/</td>
+						</tr>
+						<tr class="rowEven">
+							<td>PSG SVN</td>
+							<td>https://xyz.com//psg/</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Application Config SVN</td>
+							<td>https://xyz.com/</td>
+						</tr>
+						<tr class="rowEven">
+							<td>PSG</td>
+							<td>http://xlg-</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Eureka RETAIL_BANK-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowEven">
+							<td>Eureka ASSISTED-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Config Server RETAIL_BANK-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowEven">
+							<td>Config Server ASSISTED-NAM</td>
+							<td></td>
+						</tr>
+						<!--<tr class="rowOdd">
+							<td>Eureka RETAIL_BANK-NAM</td>
+							<td>http://xyz.net</td>
+						</tr>
+						<!--<tr class="rowEven">
+							<td>Eureka ASSISTED-NAM</td>
+							<td>http://xyz.net</td>
+						</tr>-->
+						<!--<tr class="rowEven">
+							<td>Config Server RETAIL_BANK-NAM</td>
+							<td>http://xyz.net</td>
+						</tr>
+						<!--<tr class="rowEven">
+							<td>Config Server ASSISTED-NAM</td>
+							<td>http://xyz.net</td>
+						</tr>
+						<tr class="rowEven">
+							<td>APIm SIT</td>
+							<td>http://xyz.net</td>
+						</tr>					
+					</tbody>
+				</table>
+				</div>
+						<div id="tabs-13" style="overflow:auto;">
+						<table border="1" width = "100%;" align = "centre">
+						<tbody>
+						<tr class="tableHeader">
+							<td style="font-weight: bold; width: 230px;">Application</td>
+							<td style="font-weight: bold;">End Point URL - DEV3</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Avoka Eclipse</td>
+							<td></td>
+						</tr>
+						<tr class="rowEven">
+							<td>Avoka UI Dev2</td>
+							<td>http://xyz.net</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Avoka UI DIT</td>
+							<td>- http://xyz.net</td>
+						</tr>
+						<!-- <tr class="rowEven">
+							<td>Swagger UI</td>
+							<td><a target="_blank" href="https://xyz.com">https://xyz.com</a></td>
+						</tr> 
+						<tr class="rowEven">
+							<td>Domain</td>
+							<td>xyz</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>GCIF URL</td>
+							<td>https://xyz.com</td>
+						</tr>
+						<tr class="rowEven">
+							<td>DB URL</td>
+							<td>https://xyz.com:@//oraasgtd68-xyz:8889/USAVK1D</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>PSG Policy SVN</td>
+							<td>https://xyz.com/svn/</td>
+						</tr>
+						<tr class="rowEven">
+							<td>PSG SVN</td>
+							<td>https://xyz.com/sv</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Application Config SVN</td>
+							<td>https://xyz.com/svn/</td>
+						</tr>
+						<tr class="rowEven">
+							<td>PSG</td>
+							<td>https://xyz.com</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Eureka RETAIL_BANK-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowEven">
+							<td>Eureka ASSISTED-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Config Server RETAIL_BANK-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowEven">
+							<td>Config Server ASSISTED-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Eureka RETAIL_BANK-NAM</td>
+							<td>https://xyz.com</td>
+						</tr>
+						<tr class="rowEven">
+							<td>Eureka ASSISTED-NAM</td>
+							<td>https://xyz.com</td>
+						</tr>
+						<tr class="rowEven">
+							<td>Config Server RETAIL_BANK-NAM</td>
+							<td>https://xyz.com</td>
+						</tr>
+						<tr class="rowEven">
+							<td>Config Server ASSISTED-NAM</td>
+							<td>https://xyz.com</td>
+						</tr>							
+					</tbody>
+				</table>
+						</div>
+					</div>
+			</div>  -->
+			<!--
+			<div id="tabs-2" style="margin-top:360px; height: 100%;">
+					<table border="1" width = "100%;" align = "centre">
+					<tbody>
+						<tr class="tableHeader">
+							<td style="font-weight: bold; width: 230px;">Application</td>
+							<td style="font-weight: bold;">End Point URL - SIT</td>
+						</tr>
+						<tr class="rowEven">
+							<td>Eclipse</td>
+							<td><a target="_blank" href="https://xyz.com">https://xyz.com</a></td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Avoka</td>
+							<td>https://xyz.com</td>
+						</tr>
+						<tr class="rowEven">
+							<td>Domain</td>
+							<td>xyz-dev.xyz</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>PSG Policy SVN - Staging</td>
+							<td>https://xyz.com/svn/16907</td>
+						</tr>
+						<tr class="rowEven">
+							<td>PSG SVN - Staging</td>
+							<td>https://xyz.com/svn/</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Application Config SVN - Staging</td>
+							<td>https://xyz.com/svn/</td>
+						</tr>
+						<tr class="rowEven">
+							<td>PSG</td>
+							<td>https://xyz.com</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Eureka RETAIL_BANK-NAM</td>
+							<td>https://xyz.com</td>
+						</tr>
+						<tr class="rowEven">
+							<td>Eureka ASSISTED-NAM</td>
+			 				<td>https://xyz.com</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Config Server RETAIL_BANK-NAM</td>
+							<td>https://xyz.com</td>
+						</tr>
+						<tr class="rowEven">
+							<td>Config Server ASSISTED-NAM</td>
+							<td>https://xyz.com</td>
+						</tr>							
+					</tbody>
+				</table> 
+
+			</div>-->
+	<!--		
+			<div id="tabs-3" style="margin-top:210px;">
+				<!-- <p> 
+					<div id="tabs3" style="height:100%;font-size: 12px; position:relative;">
+						<ul style="font-size: 12px;">
+							<li><a href="#tabs-31">UAT 1</a></li>
+							<li><a href="#tabs-32">UAT 2</a></li>
+							<li><a href="#tabs-33">UAT 3</a></li>
+						</ul>
+						<div id="tabs-31" style="overflow:auto;">
+						<table border="1" width = "100%;" align = "centre">
+						<tbody>
+						<tr class="tableHeader">
+							<td style="font-weight: bold; width: 230px;">Application</td>
+							<td style="font-weight: bold;">End Point URL - UAT1</td>
+						</tr>
+						<tr class="rowEven">
+							<td>Avoka Eclipse</td>
+							<td>https://xyz.com</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Avoka UI UAT1</td>
+							<td>https://xyz.com</td>
+						</tr>
+						<!-- <tr class="rowEven">
+							<td>Swagger UI</td>
+							<td>NA</td>
+						</tr> 
+						<tr class="rowEven">
+							<td>Domain</td>
+							<td>xyz-dev.xyz</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>GCIF URL</td>
+							<td>https://xyz.com</td>
+						</tr>
+						<tr class="rowEven">
+							<td>DB URL</td>
+							<td>fffff</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>PSG Policy SVN</td>
+							<td>https://xyz.com/svn/169073/</td>
+						</tr>
+						<tr class="rowEven">
+							<td>PSG SVN</td>
+							<td>https://xyz.com/svn</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Application Config SVN</td>
+							<td>https://xyz.com/svnfff</td>
+						</tr>
+						<tr class="rowEven">
+							<td>PSG</td>
+							<td>ffff</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Eureka RETAIL_BANK-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowEven">
+							<td>Eureka ASSISTED-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Config Server RETAIL_BANK-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowEven">
+							<td>Config Server ASSISTED-NAM</td>
+							<td></td>
+						</tr>
+						<!--<tr class="rowOdd">
+							<td>Eureka RETAIL_BANK-NAM</td>
+							<td>https://xyz.com</td>
+						</tr>
+						<tr class="rowEven">
+							<td>Eureka ASSISTED-NAM</td>
+							<td>https://xyz.com</td>
+						</tr>
+						<tr class="rowEven">
+							<td>Config Server RETAIL_BANK-NAM</td>
+							<td>https://xyz.com.</td>
+						</tr>
+						<tr class="rowEven">
+							<td>Config Server ASSISTED-NAM</td>
+							<td>https://xyz.com</td>
+						</tr>							
+					</tbody>
+				</table>
+						</div> 
+							
+						<div id="tabs-32" style="overflow:auto;">
+						<table border="1" width = "100%;" align = "centre">
+						<tbody>
+						<tr class="tableHeader">
+							<td style="font-weight: bold; width: 230px;">Application</td>
+							<td style="font-weight: bold;">End Point URL - UAT2</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Avoka Eclipse</td>
+							<td>https://xyz.com</td>
+						</tr>
+						<tr class="rowEven">
+							<td>SALESFORCE U1UAT2</td>
+							<td>https://xyz.com</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Avoka UI</td>
+							<td>https://xyz.com</td>
+						</tr>
+						<!-- <tr class="rowEven">
+							<td>Swagger UI</td>
+							<td>NA</td>
+						</tr> 
+						<tr class="rowEven">
+							<td>Domain</td>
+							<td>xyz-dev.xyz</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>GCIF URL</td>
+							<td>https://xyz.com</td>
+						</tr>
+						<tr class="rowEven">
+							<td>DB URL</td>
+							<td>https://xyz.com:@//xyz42-xyz:8889/USAVK1U</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>PSG Policy SVN</td>
+							<td>https://xyz.com</td>
+						</tr>
+						<tr class="rowEven">
+							<td>PSG SVN</td>
+							<td>https://xyz.com</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Application Config SVN</td>
+							<td>https://xyz.com</td>
+						</tr>
+						<tr class="rowEven">
+							<td>PSG</td>
+							<td>https://xyz.com</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Eureka RETAIL_BANK-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowEven">
+							<td>Eureka ASSISTED-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Config Server RETAIL_BANK-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowEven">
+							<td>Config Server ASSISTED-NAM</td>
+							<td></td>
+						</tr>
+						<!--<tr class="rowOdd">
+							<td>Eureka RETAIL_BANK-NAM</td>
+							<td>https://xyz.com</td>
+						</tr>
+						<!--<tr class="rowEven">
+							<td>Eureka ASSISTED-NAM</td>
+							<td>https://xyz.com</td>
+						</tr>-->
+						<!--<tr class="rowEven">
+							<td>Config Server RETAIL_BANK-NAM</td>
+							<td>https://xyz.com.</td>
+						</tr>
+						<!--<tr class="rowEven">
+							<td>Config Server ASSISTED-NAM</td>
+							<td>https://xyz.com</td>
+						</tr> 					
+					</tbody>
+				</table>
+						</div> 
+				   <div id="tabs-33" style="overflow:auto;">
+						<table border="1" width = "100%;" align = "centre">
+						<tbody>
+						<tr class="tableHeader">
+							<td style="font-weight: bold; width: 230px;">Application</td>
+							<td style="font-weight: bold;">End Point URL - UAT3</td>
+						</tr>
+						<tr class="rowEven">
+							<td>Avoka Eclipse</td>
+							<td></a></td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Avoka UI</td>
+							<td>https://xyz.com</td>
+						</tr>
+						<!-- <tr class="rowEven">
+							<td>Swagger UI</td>
+							<td>NA</td>
+						</tr> 
+						<tr class="rowEven">
+							<td>Domain</td>
+							<td>xyz-dev.xyz</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>GCIF URL</td>
+							<td>https://xyz.com</td>
+						</tr>
+						<tr class="rowEven">
+							<td>DB URL</td>
+							<td>https://xyz.com:@//xyz42-xyz:8889/USAVK1U</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>PSG Policy SVN</td>
+							<td>https://xyz.com</td>
+						</tr>
+						<tr class="rowEven">
+							<td>PSG SVN</td>
+							<td>https://xyz.com/svn/</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Application Config SVN</td>
+							<td>https://xyz.com/svn/</td>
+						</tr>
+						<tr class="rowEven">
+							<td>PSG</td>
+							<td>https://xyz.com</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Eureka RETAIL_BANK-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowEven">
+							<td>Eureka ASSISTED-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Config Server RETAIL_BANK-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowEven">
+							<td>Config Server ASSISTED-NAM</td>
+							<td></td>
+						</tr>
+						<!--<tr class="rowOdd">
+							<td>Eureka RETAIL_BANK-NAM</td>
+							<td>https://xyz.com</td>
+						</tr>
+						<!--<tr class="rowEven">
+							<td>Eureka ASSISTED-NAM</td>
+							<td>https://xyz.com</td>
+						</tr>-->
+						<!--<tr class="rowEven">
+							<td>Config Server RETAIL_BANK-NAM</td>
+							<td>https://xyz.com</td>
+						</tr>
+						<!--<tr class="rowEven">
+							<td>Config Server ASSISTED-NAM</td>
+							<td>https://xyz.com</td>
+						</tr>						
+					</tbody>
+				</table>
+						</div>
+					</div>        
+			</div>
+			<div id="tabs-4" style="margin-top:210px; height: 100%;">
+				
+						<table border="1" width = "100%;" align = "centre">
+					<tbody>
+						<tr class="tableHeader">
+							<td style="font-weight: bold; width: 230px;">Application</td>
+							<td style="font-weight: bold;">End Point URL - PERF</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Avoka Eclipse Stress</td>
+							<td>https://perf.us.xyz.XYZgroup.net</td>
+						</tr>
+						<tr class="rowEven">
+							<td>SALESFORCE</td>
+							<td>https://XYZretail--stressenv.lightning.force.com/lightning/page/home</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Avoka UI</td>
+							<td>- https://xyz.htm</td>
+						</tr>
+						<tr class="rowEven">
+							<td>Domain</td>
+							<td>xyz</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>GCIF URL</td>
+							<td>https://xyz.comHandlerServlet</td>
+						</tr>
+						<tr class="rowEven">
+							<td>DB URL</td>
+							<td>https://xyz.com:@//xyz40-xyz:8889/HAUSAVK1L</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>PSG Policy SVN - Staging</td>
+							<td>https://xyz.com/svn/169073/CCP/corefdn-perf-stage/GT1PERF/configrepo/xyz/</td>
+						</tr>
+						<tr class="rowEven">
+							<td>PSG SVN - Staging</td>
+							<td>https://xyz.com/svn/169073/CCP/corefdn-perf-stage/GT1PERF/configrepo/psg/</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Application Config SVN - Staging</td>
+							<td>https://xyz.com/svn/169073/CCP/corefdn-perf-stage/GT1PERF/configrepo/</td>
+						</tr>
+						<tr class="rowEven">
+							<td>PSG</td>
+							<td>http://xlg-fdn-p-psg-gt1perf.xyz</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Eureka RETAIL_BANK-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowEven">
+							<td>Eureka ASSISTED-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Config Server RETAIL_BANK-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowEven">
+							<td>Config Server ASSISTED-NAM</td>
+							<td></td>
+						</tr>
+						<!--<tr class="rowOdd">
+							<td>Eureka RETAIL_BANK-NAM</td>
+							<td>http://xyz-gt1perf.xyz/</td>
+						</tr>
+						<!--<tr class="rowEven">
+							<td>Eureka ASSISTED-NAM</td>
+							<td>http://xyz-gt1perf.xyz/</td>
+						</tr>-->
+						<!--<tr class="rowEven">
+							<td>Config Server RETAIL_BANK-NAM</td>
+							<td>http:/xyz-gt1perf.xyz/</td>
+						</tr>
+						<!--<tr class="rowEven">
+							<td>Config Server ASSISTED-NAM</td>
+							<td>http://xyz-gt1perf.xyz/</td>
+						</tr>						
+					</tbody>
+				</table>  
+			</div>
+			<div id="tabs-5" style="margin-top:270px;">
+					<div id="tabs5" style="height:100%;font-size: 12px; position:relative;">
+						<ul style="font-size: 12px;">
+							<li><a href="#tabs-51">XYZ 1</a></li>
+							<li><a href="#tabs-52">XYZ 2</a></li>                     
+						</ul>
+						<div id="tabs-51" style="overflow:auto;">
+							
+					<table border="1" width = "100%;" align = "centre">
+					<tbody>
+						<tr class="tableHeader">
+							<td style="font-weight: bold; width: 230px;">Application</td>
+							<td style="font-weight: bold;">End Point URL - XYZ1</td>
+						</tr>
+						<tr class="rowEven">
+							<td>Avoka Eclipse Prod</td>
+							<td>https://xyz.com</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Avoka UI Prod</td>
+							<td>https://xyz.com</td>
+						</tr>
+						<tr class="rowEven">
+							<td>Domain</td>
+							<td>xyz.xyz</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>GCIF URL</td>
+							<td>https://asys.gcb-us-</td>
+						</tr>
+						<tr class="rowEven">
+							<td>DB URL</td>
+							<td>https://</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>PSG Policy SVN - Staging</td>
+							<td>https://xyz.com/svn/169073/CCP/corefdn-prod-stage/gt1-stage/GT1XYZ/configrepo/xyz/</td>
+						</tr>
+						<tr class="rowEven">
+							<td>PSG SVN - Staging</td>
+							<td>https://xyz.com/svn/169073/CCP/corefdn-prod-stage/gt1-stage/GT1XYZ/configrepo/psg/</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Application Config SVN - Staging</td>
+							<td>https://xyz.com/svn/169073/CCP/corefdn-prod-stage/gt1-stage/GT1XYZ/configrepo/</td>
+						</tr>
+						<tr class="rowEven">
+							<td>PSG</td>
+							<td>http://xyz.xyz.xyz</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Eureka RETAIL_BANK-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowEven">
+							<td>Eureka ASSISTED-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Config Server RETAIL_BANK-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowEven">
+							<td>Config Server ASSISTED-NAM</td>
+							<td></td>
+						</tr>
+						<!--<tr class="rowOdd">
+							<td>Eureka RETAIL_BANK-NAM</td>
+							<td>http://xyz.xyz.xyz/</td>
+						</tr>
+						<!--<tr class="rowEven">
+							<td>Eureka ASSISTED-NAM</td>
+							<td>http://xyz.xyz.xyz/</td>
+						</tr>-->
+						<!--<tr class="rowEven">
+							<td>Config Server RETAIL_BANK-NAM</td>
+							<td>http:/xyz.xyz.xyz/</td>
+						</tr>
+						<!--<tr class="rowEven">
+							<td>Config Server ASSISTED-NAM</td>
+							<td>http://xyz.xyz.xyz/</td>
+						</tr>					
+					</tbody>
+				</table>
+				</div> 
+					<div id="tabs-52" style="overflow:auto;">
+					<table border="1" width = "100%;" align = "centre">
+					<tbody>
+						<tr class="tableHeader">
+							<td style="font-weight: bold; width: 230px;">Application</td>
+							<td style="font-weight: bold;">End Point URL - XYZ2</td>
+						</tr>
+						<tr class="rowEven">
+							<td>Avoka Eclipse Prod</td>
+							<td>https://xyz.com</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Avoka UI Prod</td>
+							<td>https://XYZ.html?formCode=sampleopenaccount&fimp=XXX&brnch=YYYYY&Role=FUT1&channel=CPC&xyzid=SOEID&cin=YYY</td>
+						</tr>
+						<tr class="rowEven">
+							<td>Domain</td>
+							<td>cfapps-sw1.xyz</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>GCIF URL</td>
+							<td>https://asys.g</td>
+						</tr>
+						<tr class="rowEven">
+							<td>DB URL</td>
+							<td>https://xyz.com:@</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>PSG Policy SVN - Staging</td>
+							<td>https://xyz.com/svn/169073/CCP/corefdn-prod-stage/sw1-stage/SW1XYZ/configrepo/xyz/</td>
+						</tr>
+						<tr class="rowEven">
+							<td>PSG SVN - Staging</td>
+							<td>https://xyz.com/svn/169073/CCP/corefdn-prod-stage/sw1-stage/SW1XYZ/configrepo/psg/</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Application Config SVN - Staging</td>
+							<td>https://xyz.com/svn/169073/CCP/corefdn-prod-stage/sw1-stage/SW1XYZ/configrepo/</td>
+						</tr>
+						<tr class="rowEven">
+							<td>PSG</td>
+							<td>http://xyz.cfapps-sw1.xyz</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Eureka RETAIL_BANK-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowEven">
+							<td>Eureka ASSISTED-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Config Server RETAIL_BANK-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowEven">
+							<td>Config Server ASSISTED-NAM</td>
+							<td></td>
+						</tr>
+						<!--<tr class="rowOdd">
+							<td>Eureka RETAIL_BANK-NAM</td>
+							<td>http://xyz.cfapps-sw1.xyz/</td>
+						</tr>
+						<!--<tr class="rowEven">
+							<td>Eureka ASSISTED-NAM</td>
+							<td>http://xyz.cfapps-sw1.xyz/</td>
+						</tr>-->
+						<!--<tr class="rowEven">
+							<td>Config Server RETAIL_BANK-NAM</td>
+							<td>http:/xyz.cfapps-sw1.xyz/</td>
+						</tr>
+						<!--<tr class="rowEven">
+							<td>Config Server ASSISTED-NAM</td>
+							<td>http://xyz.cfapps-sw1.xyz/</td>
+						</tr>						
+					</tbody>
+				</table>
+						</div>              
+					</div>        
+				</p>
+			</div>
+	-->		
+			<div id="tabs-6" style="margin-top:240px;">
+				<div id="tabs6" style="height:100%;font-size: 12px; position:relative;">
+						<ul>
+							<li><a href="#tabs-101">GT1DMSDEV1</a></li>
+							<li><a href="#tabs-102">SW1DMSDEV2</a></li>
+							<li><a href="#tabs-103">GT1DMSDEV3</a></li>
+						</ul>
+						<div id="tabs-101" style="overflow:auto;">
+						<table border="1" width = "100%;" align = "centre">
+						<tbody>
+						<tr class="tableHeader">
+							<td style="font-weight: bold; width: 230px;">Application</td>
+							<td style="font-weight: bold;">End Point URL - GT1DMSDEV1</td>
+						</tr>
+						<tr class="rowEven">
+							<td>Avoka Eclipse</td>
+							<td></td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Avoka UI DEV1</td>
+							<td>https://sd-03cb-02a8.xyz/xyzSmartForm.html?formCode=sampleopenaccount&fimp=XXX&brnch=YYYYY&Role=FUT1&channel=CPC&xyzid=SOEID&cin=YYY</td>
+						</tr>
+						<!-- <tr class="rowEven">
+							<td>Swagger UI</td>
+							<td><a target="_blank" href="http://xyz.net/swagger-ui.html">http://xyz.net/swagger-ui.html</a></td>
+						</tr> -->
+						<tr class="rowEven">
+							<td>Domain</td>
+							<td>apps-gt1-dev.xyz</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>GCIF URL</td>
+							<td>https://xyz.com</td>
+						</tr>
+						<tr class="rowEven">
+							<td>DB URL</td>
+							<td>https://xyz.com:@//oraasgtd68-xyz:8889/USAVK1D</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>PSG Policy SVN</td>
+							<td>https://xyz.com/svn/169073/CCP/dms/GT1DMSDEV1/xyz_xyz/xyz/</td>
+						</tr>
+						<tr class="rowEven">
+							<td>PSG SVN</td>
+							<td>https://xyz.com/svn/169073/CCP/dms/GT1DMSDEV1/xyz_xyz/psg/</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Application Config SVN</td>
+							<td>https://xyz.com/svn/169073/CCP/dms/GT1DMSDEV1/xyz_xyz/</td>
+						</tr>
+						<tr class="rowEven">
+							<td>PSG</td>
+							<td>https://xyz-dev1.apps-gt1-dev.xyz</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Eureka RETAIL_BANK-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowEven">
+							<td>Eureka ASSISTED-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Config Server RETAIL_BANK-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowEven">
+							<td>Config Server ASSISTED-NAM</td>
+							<td></td>
+						</tr>
+						<!--<tr class="rowOdd">
+							<td>Eureka RETAIL_BANK-NAM</td>
+							<td>http://xyz.net</td>
+						</tr>
+						<!--<tr class="rowEven">
+							<td>Eureka ASSISTED-NAM</td>
+							<td>http://xyz-dev1.xyz-dev.xyz</td>
+						</tr> -->
+						<!--<tr class="rowEven">
+							<td>Config Server RETAIL_BANK-NAM</td>
+							<td>http:/xyz-dev1.xyz-dev.xyz</td>
+						</tr>
+						<!--<tr class="rowEven">
+							<td>Config Server ASSISTED-NAM</td>
+							<td>http://xyz-dev1.xyz-dev.xyz</td>
+						</tr>	-->						
+					</tbody>
+				</table>
+				</div>
+				<div id="tabs-102" style="overflow:auto;">
+						<table border="1" width = "100%;" align = "centre">
+						<tbody>
+						<tr class="tableHeader">
+							<td style="font-weight: bold; width: 230px;">Application</td>
+							<td style="font-weight: bold;">End Point URL - SW1DMSDEV2</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Avoka Eclipse SIT2</td>
+							<td>https://sit2.us.xyz.XYZgroup.net</td>
+						</tr>
+						<tr class="rowEven">
+							<td>Salesforce</td>
+							<td>https://XYZretail--</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Avoka UI SIT2</td>
+							<td>SIT1 - https://sit1.xyz.XYZgroup.net/xyzSmartForm.html?formCode=sampleopenaccount&fimp=XXX&brnch=YYYYY&Role=FUT1&channel=CPC&xyzid=SOEID&cin=YYY</td>
+						</tr>
+						<!-- <tr class="rowEven">
+							<td>Swagger UI</td>
+							<td><a target="_blank" href="http://xyz.net/swagger-ui.html">http://rtl-xd-o-usretail-dev2.xyz-dev.xyz/swagger-ui.html</a></td>
+						</tr> -->
+						<tr class="rowEven">
+							<td>Domain</td>
+							<td>apps-sw1-dev.xyz</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>GCIF URL</td>
+							<td>https://xyz.com</td>
+						</tr>
+						<tr class="rowEven">
+							<td>DB URL</td>
+							<td>https://xyz.com:@//oraasgtd68-xyz:8889/USAVK1D</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>PSG Policy SVN</td>
+							<td>https://xyz.com/svn/169073/CCP/dms/SW1DMSDEV2/xyz_xyz/xyz/</td>
+						</tr>
+						<tr class="rowEven">
+							<td>PSG SVN</td>
+							<td>https://xyz.com/svn/169073/CCP/dms/SW1DMSDEV2/xyz_xyz/psg/</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Application Config SVN</td>
+							<td>https://xyz.com/svn/169073/CCP/dms/SW1DMSDEV2/xyz_xyz/</td>
+						</tr>
+						<tr class="rowEven">
+							<td>PSG</td>
+							<td>https://xyz-dev2.apps-sw1-dev.xyz</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Eureka RETAIL_BANK-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowEven">
+							<td>Eureka ASSISTED-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Config Server RETAIL_BANK-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowEven">
+							<td>Config Server ASSISTED-NAM</td>
+							<td></td>
+						</tr>
+						<!--<tr class="rowOdd">
+							<td>Eureka RETAIL_BANK-NAM</td>
+							<td>http://xyz-dev2.xyz-dev.xyz</td>
+						</tr>
+						<!--<tr class="rowEven">
+							<td>Eureka ASSISTED-NAM</td>
+							<td>http://xyz-dev2.xyz-dev.xyz</td>
+						</tr>-->
+						<!--<tr class="rowEven">
+							<td>Config Server RETAIL_BANK-NAM</td>
+							<td>http:/xyz-dev2.xyz-dev.xyz</td>
+						</tr>
+						<!--<tr class="rowEven">
+							<td>Config Server ASSISTED-NAM</td>
+							<td>http://xyz-dev2.xyz-dev.xyz</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>APIm SIT</td>
+							<td>https://sit.developer.XYZgroup.net/gcgapi/dev2/product</td>
+						</tr>	-->					
+					</tbody>
+				</table>
+				</div>
+						<div id="tabs-103" style="overflow:auto;">
+						<table border="1" width = "100%;" align = "centre">
+						<tbody>
+						<tr class="tableHeader">
+							<td style="font-weight: bold; width: 230px;">Application</td>
+							<td style="font-weight: bold;">End Point URL - GT1DMSDEV3</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Avoka Eclipse</td>
+							<td></td>
+						</tr>
+						<tr class="rowEven">
+							<td>Avoka UI Dev2</td>
+							<td>https://
+							</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Avoka UI DIT</td>
+							<td>- https://</td>
+						</tr>
+						<!-- <tr class="rowEven">
+							<td>Swagger UI</td>
+							<td><a target="_blank" href="https://xyz.com">https://xyz.com</a></td>
+						</tr> -->
+						<tr class="rowEven">
+							<td>Domain</td>
+							<td>apps-gt1-dev.xyz</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>GCIF URL</td>
+							<td>https://xyz.com</td>
+						</tr>
+						<tr class="rowEven">
+							<td>DB URL</td>
+							<td>https://xyz.com:@//oraasgtd68-xyz:8889/USAVK1D</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>PSG Policy SVN</td>
+							<td>https://xyz.com/svn/169073/CCP/dms/GT1DMSDEV3/xyz_xyz/xyz/</td>
+						</tr>
+						<tr class="rowEven">
+							<td>PSG SVN</td>
+							<td>https://xyz.com/svn/169073/CCP/dms/GT1DMSDEV3/xyz_xyz/psg/</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Application Config SVN</td>
+							<td>https://xyz.com/svn/169073/CCP/dms/GT1DMSDEV3/xyz_xyz/</td>
+						</tr>
+						<tr class="rowEven">
+							<td>PSG</td>
+							<td> https://xyz-dev3.apps-gt1-dev.xyz</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Eureka RETAIL_BANK-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowEven">
+							<td>Eureka ASSISTED-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Config Server RETAIL_BANK-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowEven">
+							<td>Config Server ASSISTED-NAM</td>
+							<td></td>
+						</tr>
+						<!--<tr class="rowOdd">
+							<td>Eureka RETAIL_BANK-NAM</td>
+							<td>http://xyz-dev3.xyz-dev.xyz</td>
+						</tr>
+						<!--<tr class="rowEven">
+							<td>Eureka ASSISTED-NAM</td>
+							<td>http://xyz-dev3.xyz-dev.xyz</td>
+						</tr>-->
+						<!--<tr class="rowEven">
+							<td>Config Server RETAIL_BANK-NAM</td>
+							<td>http:/xyz-dev3.xyz-dev.xyz</td>
+						</tr>
+						<!--<tr class="rowEven">
+							<td>Config Server ASSISTED-NAM</td>
+							<td>http://xyz-dev3.xyz-dev.xyz</td>
+						</tr>-->							
+					</tbody>
+				</table>
+						</div>
+					</div>
+			</div>
+			<div id="tabs-7" style="margin-top:240px;">
+				<!-- <p> -->
+					<div id="tabs7" style="height:100%;font-size: 12px; position:relative;">
+						<ul style="font-size: 12px;">
+							<li><a href="#tabs-301">GT1DMSUAT1</a></li>
+							<li><a href="#tabs-302">SW1DMSUAT2</a></li>
+							<li><a href="#tabs-303">GT1DMSUAT3</a></li>
+						</ul>
+						<div id="tabs-301" style="overflow:auto;">
+						<table border="1" width = "100%;" align = "centre">
+						<tbody>
+						<tr class="tableHeader">
+							<td style="font-weight: bold; width: 230px;">Application</td>
+							<td style="font-weight: bold;">End Point URL - GT1DMSUAT1</td>
+						</tr>
+						<tr class="rowEven">
+							<td>Avoka Eclipse</td>
+							<td>https://uat1.us.xyz.XYZgroup.net</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Avoka UI UAT1</td>
+							<td>https://uat1.xyz.XYZgroup.neh=YYYYY&Role=FUT1&chan&cin=YYY</td>
+						</tr>
+						<!-- <tr class="rowEven">
+							<td>Swagger UI</td>
+							<td>NA</td>
+						</tr> -->
+						<tr class="rowEven">
+							<td>Domain</td>
+							<td>apps-gt1-dev.xyz</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>GCIF URL</td>
+							<td>https://xyz:8242/GCIFTIWeb/servlet/com.XYZgroup.gcif.web.servlet.HTTPHandlerServlet</td>
+						</tr>
+						<tr class="rowEven">
+							<td>DB URL</td>
+							<td>https://xyz.com:@//xyz42-xyz:8889/USAVK1U</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>PSG Policy SVN</td>
+							<td>https://xyz.com/svn/169688/XYZpaas-devops/CCP/GT1DMSUAT1/xyz_xyz/xyz/</td>
+						</tr>
+						<tr class="rowEven">
+							<td>PSG SVN</td>
+							<td>https://xyz.com/svn/169688/XYZpaas-devops/CCP/GT1DMSUAT1/xyz_xyz/psg/</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Application Config SVN</td>
+							<td>https://xyz.com/svn/169688/XYZpaas-devops/CCP/GT1DMSUAT1/xyz_xyz/</td>
+						</tr>
+						<tr class="rowEven">
+							<td>PSG</td>
+							<td>https://xyz-uat1.apps-gt1-dev.xyz</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Eureka RETAIL_BANK-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowEven">
+							<td>Eureka ASSISTED-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Config Server RETAIL_BANK-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowEven">
+							<td>Config Server ASSISTED-NAM</td>
+							<td></td>
+						</tr>
+						<!--<tr class="rowOdd">
+							<td>Eureka RETAIL_BANK-NAM</td>
+							<td>http://xyz-uat1.xyz-dev.xyz</td>
+						</tr>
+						<!--<tr class="rowEven">
+							<td>Eureka ASSISTED-NAM</td>
+							<td>http://xyz-uat1.xyz-dev.xyz</td>
+						</tr>-->
+						<!--<tr class="rowEven">
+							<td>Config Server RETAIL_BANK-NAM</td>
+							<td>http:/xyz-uat1.</td>
+						</tr>
+						<!--<tr class="rowEven">
+							<td>Config Server ASSISTED-NAM</td>
+							<td>http://xyz-uat1.xyz-dev.xyz</td>
+						</tr>-->							
+					</tbody>
+				</table>
+						</div> 
+							
+						<div id="tabs-302" style="overflow:auto;">
+						<table border="1" width = "100%;" align = "centre">
+						<tbody>
+						<tr class="tableHeader">
+							<td style="font-weight: bold; width: 230px;">Application</td>
+							<td style="font-weight: bold;">End Point URL - SW1DMSUAT2</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Avoka Eclipse</td>
+							<td>https://uat2.us.xyz.XYZgroup.net</td>
+						</tr>
+						<tr class="rowEven">
+							<td>SALESFORCE U1UAT2</td>
+							<td>https://XYZretail--u1uat2.lightning.force.com/lightning/page/home</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Avoka UI</td>
+							<td>https://uat2.xyz.XYZgroup.net/xyzSmartForm.html?formCode=sampleopenaccount&fimp=XXX&brnch=YYYYY&Role=FUT1&channel=CPC&xyzid=SOEID&cin=YYY</td>
+						</tr>
+						<!-- <tr class="rowEven">
+							<td>Swagger UI</td>
+							<td>NA</td>
+						</tr> -->
+						<tr class="rowEven">
+							<td>Domain</td>
+							<td>apps-sw1-dev.xyz</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>GCIF URL</td>
+							<td>https://xyz:8242/GCIFTIWeb/servlet/com.XYZgroup.gcif.web.servlet.HTTPHandlerServlet</td>
+						</tr>
+						<tr class="rowEven">
+							<td>DB URL</td>
+							<td>https://xyz.com:@//xyz42-xyz:8889/USAVK1U</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>PSG Policy SVN</td>
+							<td>https://xyz.com/svn/169688/XYZpaas-devops/CCP/SW1DMSUAT2/xyz_xyz/xyz/</td>
+						</tr>
+						<tr class="rowEven">
+							<td>PSG SVN</td>
+							<td>https://xyz.com/svn/169688/XYZpaas-devops/CCP/SW1DMSUAT2/xyz_xyz/psg/</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Application Config SVN</td>
+							<td>https://xyz.com/svn/169688/XYZpaas-devops/CCP/SW1DMSUAT2/xyz_xyz/</td>
+						</tr>
+						<tr class="rowEven">
+							<td>PSG</td>
+							<td>https://xyz-uat2.apps-sw1-dev.xyz</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Eureka RETAIL_BANK-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowEven">
+							<td>Eureka ASSISTED-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Config Server RETAIL_BANK-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowEven">
+							<td>Config Server ASSISTED-NAM</td>
+							<td></td>
+						</tr>	
+						<!--<tr class="rowOdd">
+							<td>Eureka RETAIL_BANK-NAM</td>
+							<td>http://xyz-uat1.xyz-dev.xyz</td>
+						</tr>
+						<tr class="rowEven">
+							<td>Eureka ASSISTED-NAM</td>
+							<td>http://xyz-uat1.xyz-dev.xyz</td>
+						</tr>
+						<tr class="rowEven">
+							<td>Config Server RETAIL_BANK-NAM</td>
+							<td>http:/xyz-uat1.</td>
+						</tr>
+						<!--<tr class="rowEven">
+							<td>Config Server ASSISTED-NAM</td>
+							<td>http://xyz-uat1.xyz-dev.xyz</td>
+						</tr>-->							
+					</tbody>
+				</table>
+						</div> 
+				   <div id="tabs-303" style="overflow:auto;">
+						<table border="1" width = "100%;" align = "centre">
+						<tbody>
+						<tr class="tableHeader">
+							<td style="font-weight: bold; width: 230px;">Application</td>
+							<td style="font-weight: bold;">End Point URL - GT1DMSUAT3</td>
+						</tr>
+						<tr class="rowEven">
+							<td>Avoka Eclipse</td>
+							<td></a></td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Avoka UI</td>
+							<td>https://xyz.XYZgroup.net/xyzSmartForm.html?formCode=sampleopenaccount&fimp=XXX&brnch=YYYYY&Role=FUT1&channel=CPC&xyzid=SOEID&cin=YYY</td>
+						</tr>
+						<!-- <tr class="rowEven">
+							<td>Swagger UI</td>
+							<td>NA</td>
+						</tr> -->
+						<tr class="rowEven">
+							<td>Domain</td>
+							<td>apps-gt1-dev.xyz</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>GCIF URL</td>
+							<td>https://xyz:8242/GCIFTIWeb/servlet/com.XYZgroup.gcif.web.servlet.HTTPHandlerServlet</td>
+						</tr>
+						<tr class="rowEven">
+							<td>DB URL</td>
+							<td>https://xyz.com:@//xyz42-xyz:8889/USAVK1U</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>PSG Policy SVN</td>
+							<td>https://xyz.com/svn/169688/XYZpaas-devops/CCP/GT1DMSUAT3/xyz_xyz/xyz/</td>
+						</tr>
+						<tr class="rowEven">
+							<td>PSG SVN</td>
+							<td>https://xyz.com/svn/169688/XYZpaas-devops/CCP/GT1DMSUAT3/xyz_xyz/psg/</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Application Config SVN</td>
+							<td>https://xyz.com/svn/169688/XYZpaas-devops/CCP/GT1DMSUAT3/xyz_xyz/</td>
+						</tr>
+						<tr class="rowEven">
+							<td>PSG</td>
+							<td> https://xyz-uat3.apps-gt1-dev.xyz</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Eureka RETAIL_BANK-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowEven">
+							<td>Eureka ASSISTED-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Config Server RETAIL_BANK-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowEven">
+							<td>Config Server ASSISTED-NAM</td>
+							<td></td>
+						</tr>	
+						<!--<tr class="rowOdd">
+							<td>Eureka RETAIL_BANK-NAM</td>
+							<td>http://xyz-uat3.xyz-dev.xyz</td>
+						</tr>
+						<!--<tr class="rowEven">
+							<td>Eureka ASSISTED-NAM</td>
+							<td>http://xyz-uat3.xyz-dev.xyz</td>
+						</tr>-->
+						<!--<tr class="rowEven">
+							<td>Config Server RETAIL_BANK-NAM</td>
+							<td>http:/xyz-uat3.xyz-dev.xyz</td>
+						</tr>
+						<!--<tr class="rowEven">
+							<td>Config Server ASSISTED-NAM</td>
+							<td>http://xyz-uat3.xyz-dev.xyz</td>
+						</tr>-->						
+					</tbody>
+				</table>
+						</div>
+					</div>        
+			</div>
+			<div id="tabs-8" style="margin-top:270px; height: 100%;">
+				
+						<table border="1" width = "100%;" align = "centre">
+					<tbody>
+						<tr class="tableHeader">
+							<td style="font-weight: bold; width: 230px;">Application</td>
+							<td style="font-weight: bold;">End Point URL - GT1DMSPERF</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Avoka Eclipse</td>
+							<td>https://perf.us.xyz.XYZgroup.net</td>
+						</tr>
+						<tr class="rowEven">
+							<td>SALESFORCE</td>
+							<td>https://XYZretail--stressenv.lightning.force.com/lightning/page/home</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Avoka UI</td>
+							<td>https://xyz.html?formCode=sampleopenaccount&fimp=XXX&brnch=YYYYY&Role=FUT1&channel=CPC&xyzid=SOEID&cin=YYY</td>
+						</tr>
+						<tr class="rowEven">
+							<td>Domain</td>
+							<td>apps-gt1-perf.xyz</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>GCIF URL</td>
+							<td>https://xyz.comHandlerServlet</td>
+						</tr>
+						<tr class="rowEven">
+							<td>DB URL</td>
+							<td>https://xyz.com:@//xyz40-xyz:8889/HAUSAVK1L</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>PSG Policy SVN - Staging</td>
+							<td>https://xyz.com/svn/169688/XYZpaas-prod/NAM/GT1DMSPERF/xyz_xyz/xyz/</td>
+						</tr>
+						<tr class="rowEven">
+							<td>PSG SVN - Staging</td>
+							<td>https://xyz.com/svn/169688/XYZpaas-prod/NAM/GT1DMSPERF/xyz_xyz/psg/</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Application Config SVN - Staging</td>
+							<td>https://xyz.com/svn/169688/XYZpaas-prod/NAM/GT1DMSPERF/xyz_xyz/</td>
+						</tr>
+						<tr class="rowEven">
+							<td>PSG</td>
+							<td>https://xyz-gt1-perf.xyz</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Eureka RETAIL_BANK-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowEven">
+							<td>Eureka ASSISTED-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Config Server RETAIL_BANK-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowEven">
+							<td>Config Server ASSISTED-NAM</td>
+							<td></td>
+						</tr>	
+						<!--<tr class="rowOdd">
+							<td>Eureka RETAIL_BANK-NAM</td>
+							<td>http://xyz-gt1perf.xyz/</td>
+						</tr>
+						<!--<tr class="rowEven">
+							<td>Eureka ASSISTED-NAM</td>
+							<td>http://asn-fdn.xyz/</td>
+						</tr>-->
+						<!--<tr class="rowEven">
+							<td>Config Server RETAIL_BANK-NAM</td>
+							<td>http://rbn-fer-gt1perf.xyz/</td>
+						</tr>
+						<!--<tr class="rowEven">
+							<td>Config Server ASSISTED-NAM</td>
+							<td>http://asnserver-gt1perf.xyz/</td>
+						</tr>		-->					
+					</tbody>
+				</table>  
+			</div>
+			<div id="tabs-9" style="margin-top:300px;">
+					<div id="tabs9" style="height:100%;font-size: 12px; position:relative;">
+						<ul style="font-size: 12px;">
+							<li><a href="#tabs-501">GT1DMSXYZ</a></li>
+							<li><a href="#tabs-502">SW1DMSXYZ</a></li>                     
+						</ul>
+						<div id="tabs-501" style="overflow:auto;">
+							
+					<table border="1" width = "100%;" align = "centre">
+					<tbody>
+						<tr class="tableHeader">
+							<td style="font-weight: bold; width: 230px;">Application</td>
+							<td style="font-weight: bold;">End Point URL - GT1DMSXYZ</td>
+						</tr>
+						<tr class="rowEven">
+							<td>Avoka Eclipse Prod</td>
+							<td>https://xyz.com</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Avoka UI Prod</td>
+							<td>https://xyz.com.XYZgroup.net/assistedchannels/servlep=XXX&brnch=YYYYY&Role=FUT1&channel=CPC&xyzid=SOEID&cin=YYY</td>
+						</tr>
+						<tr class="rowEven">
+							<td>Domain</td>
+							<td>apps-gt1-XYZ</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>GCIF URL</td>
+							<td>https://TTPHandlerServlet</td>
+						</tr>
+						<tr class="rowEven">
+							<td>DB URL</td>
+							<td>xyz</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>PSG Policy SVN - Staging</td>
+							<td>https://xyz.com/svn/169688/XYZpaas-prod/NAM/GT1DMSXYZ/xyz/</td>
+						</tr>
+						<tr class="rowEven">
+							<td>PSG SVN - Staging</td>
+							<td>https://xyz.com/svn/169688/XYZpaas-prod/NAM/GT1DMSXYZ/psg/</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Application Config SVN - Staging</td>
+							<td>https://xyz.com/svn/169688/XYZpaas-prod/NAM/GT1DMSXYZ/</td>
+						</tr>
+						<tr class="rowEven">
+							<td>PSG</td>
+							<td> https://.apps-gt1-XYZ</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Eureka RETAIL_BANK-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowEven">
+							<td>Eureka ASSISTED-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Config Server RETAIL_BANK-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowEven">
+							<td>Config Server ASSISTED-NAM</td>
+							<td></td>
+						</tr>							
+					</tbody>
+				</table>
+				</div> 
+					<div id="tabs-502" style="overflow:auto;">
+					<table border="1" width = "100%;" align = "centre">
+					<tbody>
+						<tr class="tableHeader">
+							<td style="font-weight: bold; width: 230px;">Application</td>
+							<td style="font-weight: bold;">End Point URL - SW1DMSXYZ</td>
+						</tr>
+						<tr class="rowEven">
+							<td>Avoka Eclipse Prod</td>
+							<td>https://xyz.com</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Avoka UI Prod</td>
+							<td>https://xyz.com.XYZgroup.net/xyzSmartForm.html?formCode=sampleopenaccount&fimp=XXX&brnch=YYYYY&Role=FUT1&channel=CPC&xyzid=SOEID&cin=YYY</td>
+						</tr>
+						<tr class="rowEven">
+							<td>Domain</td>
+							<td>apps-sw1-XYZ</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>GCIF URL</td>
+							<td>https://asys.gcb-us-hosts.XYZcorp.com:8824/GCIFTIWeb/servlet/com.XYZgroup.gcif.web.servlet.HTTPHandlerServlet</td>
+						</tr>
+						<tr class="rowEven">
+							<td>DB URL</td>
+							<td>https://xyz.com:@(DESCRIPTION_LIST=(LOAD_BALANCE=off)(FAILOVER=on)(DESCRIPTION=(CONNECT_TIMEOUT=5)(TRANSPORT_CONNECT_TIMEOUT=3)(RETRY_COUNT=3)(ADDRESS_LIST=(LOAD_BALANCE=on)(ADDRESS=(PROTOCOL=TCP)(HOST=gtgcgdbp01-xyz)(PORT=1550)))(CONNECT_DATA=(SERVICE_NAME=AVOKADB_PRD.PRD.GT.NAM.EBIZ)))(DESCRIPTION=(CONNECT_TIMEOUT=5)(TRANSPORT_CONNECT_TIMEOUT=3)(RETRY_COUNT=3)(ADDRESS_LIST=(LOAD_BALANCE=on)(ADDRESS=(PROTOCOL=TCP)(HOST=swgcgdbp01-xyz)(PORT=1550)))(CONNECT_DATA=(SERVICE_NAME=AVOKADB_PRD.PRD.SW.NAM.EBIZ))))</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>PSG Policy SVN - Staging</td>
+							<td>https://xyz.com/svn/169688/XYZpaas-prod/NAM/SW1DMSXYZ/xyz/</td>
+						</tr>
+						<tr class="rowEven">
+							<td>PSG SVN - Staging</td>
+							<td>https://xyz.com/svn/169688/XYZpaas-prod/NAM/SW1DMSXYZ/psg/</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Application Config SVN - Staging</td>
+							<td>https://xyz.com/svn/169688/XYZpaas-prod/NAM/SW1DMSXYZ/</td>
+						</tr>
+						<tr class="rowEven">
+							<td>PSG</td>
+							<td>https://xlg-fdn-p-psg.apps-sw1-XYZ/</td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Eureka RETAIL_BANK-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowEven">
+							<td>Eureka ASSISTED-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowOdd">
+							<td>Config Server RETAIL_BANK-NAM</td>
+							<td></td>
+						</tr>
+						<tr class="rowEven">
+							<td>Config Server ASSISTED-NAM</td>
+							<td></td>
+						</tr>	
+						<!--<tr class="rowOdd">
+							<td>Eureka RETAIL_BANK-NAM</td>
+							<td>http://xyz.cfapps-sw1.xyz/</td>
+						</tr>
+						<!--<tr class="rowEven">
+							<td>Eureka ASSISTED-NAM</td>
+							<td>http://xyz.cfapps-sw1.xyz/</td>
+						</tr>-->
+						<!--<tr class="rowEven">
+							<td>Config Server RETAIL_BANK-NAM</td>
+							<td>http:/xyz.cfapps-sw1.xyz/</td>
+						</tr>
+						<!--<tr class="rowEven">
+							<td>Config Server ASSISTED-NAM</td>
+							<td>http://xyz.cfapps-sw1.xyz/</td>
+						</tr>-->							
+					</tbody>
+				</table>
+						</div>              
+					</div>        
+				</p>
+			</div>
+		</div>
+   </div>
+</section>
+
+<section id="pcfMicroServicesTab" class="tab-content hide">
+	<div style="position: relative;">
+		<ul style="font-size: 13px;">	
+				<li><a href="#tabs-6" id="microservice">Micro-Services</a></li>
+				<!--<li><a href="#tabs-7" id="microservice">Micro-Services PCF2</a></li>-->
+				<!--<li><a href="#tabs-7" id="microapps">Micro-Apps</a></li>-->
+		</ul>
+		
+		<div id="tabs-6" style="overflow: auto">
+			<table id="microserviceBasedTable" style="margin-left:25px; width: 1130px;" class="fixedTable">
+				<center>
+					<tr class="tableHeader" >
+						<th style="width: 30px;" height="60">Sr. No.</th>
+						<th style="width: 400px;">Confluence Links</th>					
+						<th style="width: 250px;">PCF Org Name</th>					
+						<th style="width: 250px;">PCF Space Name</th>
+						<th style="width: 400px;">Bitbucket Links</th>
+						<th style="width: 250px;">SonarQube Links</th>
+						<th style="width: 250px;">Soap UI Links</th>
+                       				
+						<!--<th>Production Deployment date</th>
+						<th>Primary</th>
+						<th>Code Coverage in Sonar</th>
+<th>Code Smell</th>
+<th>Duplicated Blocks</th>
+						<th>RLM</th>
+						<th>Label deployed in Production</th>
+						<th>Spring boot version</th>
+						<th>Java build pack version</th>-->
+					</tr>
+					<tr class="rowEvenFix">	
+						<td height="30">1.</td>
+						<td><a href="https://xyz/confluence/display/NAMADM/XD-D-CustomerVerification"><b>XD-D-CustomerVerification</b></a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>CROSS_DMN-&lt;ENV&gt;</td>
+						<td><a href="https://xyz.com/customerverificationrepo/browse">XD-D-CustomerVerification</a></td>	
+						<td><a href="https://sonarqube04.xyz/dashboard?id=xyz.xd.customerverification.nam">CustomerVerification_Sonar</a></td>
+                        <td><a href="https://xyz.com/soapuiproject_repo/browse/CustomerVerification-soapui-project.xml?at=refs%2Fheads%2Frelease%2F20.07">CustomerVerification_SoapUI</a></td>			
+						<!--<td>05/17/2019</td>
+						<td>Laxman/Jonathan</td>
+						<td>54.20%</td>
+						<td>203</td>
+<td>12.2%</td>
+
+						<td>573383</td>
+<td>jenkins-xyz.xyz.usretail.us.release2.int</td>
+						<td></td>
+						<td>XYZ_java_3_15_0_1
+						</td>-->
+					
+					</tr>
+					<tr class="rowOddFix">		
+						<td>2.</td>
+						<td height="30"><a href="https://xyz/confluence/display/NAMADM/OGN-C-OnboardingMongoDB-UsRetail"><b>OGN-C-OnboardingMongoDB-UsRetail</b></a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>ORIGINATION-&lt;ENV&gt;</td>
+						<td height="30"><a href="https://xyz.com/onboardingmongodb_repo/browse">OGN-C-OnboardingMongoDB-UsRetail</a></td>						
+                        <td><a href="https://sonarqube04.xyz/dashboard?id=xyz.ogn.onboardingmongodb.nam">OnboardingMongoDB_Sonar</a></td>
+						<td><a href="https://xyz.com/soapuiproject_repo/browse/OnboardingMongodbService-soapui-project.xml?at=release/20.07">OnboardingMongoDB_SoapUI</a></td>
+						<!--<td>05/16/2019</td>
+						<td>Jonathan/Eesha</td>
+<td>42.50%</td>
+<td>151</td>
+<td>11.30%</td>	
+						<td>603560</td>	
+<td>jenkins-xyz.xyz.dbservice.us.release2.int</td>
+<td></td>
+						<td>XYZ_java_3_15_0_1
+						</td>-->
+						
+</tr>
+					<tr class="rowEvenFix">	
+						<td height="30">3.</td>
+						<td><a href="https://xyz/confluence/display/NAMADM/FDN-C-EODJOBS"><b>FDN-C-EODJOBS</b></a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>FOUNDATION-&lt;ENV&gt;</td>
+						<td><a href="https://xyz.com/rtl-fdn-c-eodjobs_repo/browse">FDN-C-EODJOBS</a></td>
+						<td><a href="https://sonarqube04.xyz/dashboard?id=xyz.fdn.eodjobs.nam">Eodjobs_Sonar</a></td>						
+                       	<td><a href="https://xyz.com/soapuiproject_repo/browse/EOD-jobs-soapui-project.xml?at=release/20.07">Eodjobs_SoapUI</a></td>
+						<!--<td>05/17/2019</td>
+						<td>Chandra/Vivek</td>
+						<td>91.2%</td>
+<td>1</td>
+<td>2.2%</td>	
+						
+						<td>573391</td>
+<td>jenkins-xyz.xyz.experianbb.us.release2.int</td>
+<td></td>
+						<td>XYZ_java_3_8_1_3
+						</td> -->
+						
+					</tr>
+					<tr class="rowOddFix">	
+						<td height="30">4.</td>
+						<td><a href="https://xyz/confluence/display/NAMADM/OGN-D-AccountOpening-UsRetail"><b>OGN-D-AccountOpening-UsRetail</b></a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>ORIGINATION-&lt;ENV&gt;</td>
+						<td><a href="https://xyz.com/rtl-ogn-d-accountopening-usretail_repo/browse">OGN-D-AccountOpening-UsRetail</a></td>	
+						<td><a href="https://sonarqube04.xyz/dashboard?id=xyz.ogn.accountopening.nam">Accountopening_Sonar</a></td>						
+                        <td><a href="https://xyz.com/soapuiproject_repo/browse/AccountOpeningService-soapui-project.xml?at=release/20.07">Accountopening_SoapUI</a></td>			
+						<!--<td>05/13/2019</td>
+						<td>Bryan/Akash</td>
+						<td>80.30%</td>
+<td>7h</td>
+<td>0.00%</td>
+						
+						<td>534374</td>
+<td>jenkins-xyz.micro.xyz.globaldir.us.iut.int</td>
+<td></td>
+						<td>XYZ_java_3_15_0_1
+						</td> -->
+					</tr>
+					<tr class="rowEvenFix">	
+						<td height="30">5.</td>
+						<td><a href="https://xyz/confluence/display/NAMADM/RTL-DM-D-CustomerForms"><b>RTL-DM-D-CustomerForms</b></a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>DOC_MGMT-&lt;ENV&gt;</td>
+						<td><a href="https://xyz.com/rtl-dm-d-customerforms_repo/browse">RTL-DM-D-CustomerForms</a></td>
+                        <td><a href="https://sonarqube04.xyz/dashboard?id=xyz.dm.customerforms.nam">Customerforms_Sonar</a></td>
+						<td><a href="https://xyz.com/soapuiproject_repo/browse/CustomerForm-soapui-project.xml?at=release/20.07">Customerforms_SoapUi</a></td>		
+						<!--<td>05/16/2019</td>
+						<td>Venkatesh/Laxman</td>
+						<td>80.80%</td>
+<td>8</td>
+<td>1.10%</td>	
+						
+						<td>525306</td>	
+<td>jenkins-xyz.xyz.directbankingsalesdb.us.release2.int</td>	
+<td>Spring-Boot-1.5.22.RELEASE
+</td>
+						<td>XYZ_java_3_15_0_1
+						</td> -->
+</tr>
+					<tr class="rowOddFix">	
+						<td>6.</td>
+						<td height="30"><a href="https://xyz/confluence/display/NAMADM/RTL-PDM-D-CheckbookWS"><b>RTL-PDM-D-CheckbookWS</b></a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>PAYMENT_DVC-&lt;ENV&gt;</td>
+						<td height="30"><a href="https://xyz.com/rtl-pdm-d-checkbookws_repo/browse">RTL-PDM-D-CheckbookWS</a></td>	
+                        <td><a href="https://sonarqube04.xyz/dashboard?id=xyz.pdm.checkbook.nam">Checkbook_Sonar</a></td>
+						<td><a href="https://xyz.com/soapuiproject_repo/browse/CheckBook-soapui-project.xml?at=release/20.07">Checkbook_SoapUi</a></td>
+						<!--<td>05/16/2019</td>
+						<td>Laxman</td>
+						<td>83.2%</td>
+<td>2</td>
+<td>2.20%</td>	
+						
+						<td>488165</td>
+<td>jenkins-xyz.micro.xyz.checkbook.us.btc.int</td>
+					<td></td>
+						<td>XYZ_java_3_8_1_3
+						</td> -->
+						
+					</tr>
+					<tr class="rowEvenFix">
+						<td height="30">7.</td>
+						<td><a href="https://xyz/confluence/display/NAMADM/RTL-OGN-C-ONBOARDINGDB"><b>RTL-OGN-C-OnboardingDb</b></a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>ORIGINATION-&lt;ENV&gt;</td>
+						<td><a href="https://xyz.com/rtl-ogn-c-onboardingdb_repo/browse">RTL-OGN-C-OnboardingDb</a></td>	
+						<td><a href="https://sonarqube04.xyz/dashboard?id=xyz.ogn.dbservice.nam">Ogn-DbService_Sonar</a></td>
+						<td>-</td>
+                        			
+						<!--<td>05/15/2019</td>
+						<td>Bryan/Varun</td>
+						<td>94.50%</td>
+<td>7h</td>
+<td>0.60%</td>
+						
+						<td>536280</td>
+<td>jenkins-xyz.micro.xyz.onenotes.us.iut.int</td>
+						<td></td>
+						<td>XYZ_java_3_15_0_1
+						</td> -->
+					</tr>
+					</tr>
+					<tr class="rowOddFix">
+						<td height="40">8.</td>
+						<td><a href="https://xyz/confluence/display/NAMADM/SM-D-CustProdSrvElig-ProductRetrieve"><b>SM-D-CustProdSrvElig-ProductRetrieve</b></a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>SALES_MKTG-&lt;ENV&gt;</td>
+						<td><a href="https://xyz.com/productretrieve/browse">SM-D-CustProdSrvElig-ProductRetrieve</a></td>	
+						<td><a href="https://sonarqube04.xyz/dashboard?id=xyz.usrao.productretrieve">ProductRetrieve_Sonar</a><br><a href="https://sonarqube04.xyz/dashboard?id=xyz.usrao.productretrieve.nam">Productretrieve.nam_Sonar</a></td>
+						<td><a href="https://xyz.com/soapuiproject_repo/browse/Product_Retrieve-soapui-project.xml?at=release/20.07">ProductRetrieve_SoapUI</td>
+					</tr>
+					<tr class="rowEvenFix">
+						<td height="40">9.</td>
+						<td><a href="https://xyz/confluence/display/NAMADM/RTL-DM-D-Docusign"><b>RTL-DM-D-Docusign</b></a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>DOC_MGMT-&lt;ENV&gt;</td>
+						<td><a href="https://xyz.com/rtl-dm-d-docusign_repo/browse">RTL-DM-D-Docusign</a></td>	
+						<td><a href="https://sonarqube04.xyz/dashboard?id=xyz.dm.docusigncfg.nam">DocuSign_Sonar</a></td>
+						<td>-</td>
+					</tr>
+					</tr>
+					<tr class="rowOddFix">
+						<td height="30">10.</td>
+						<td><a href="https://xyz/confluence/display/NAMADM/OGN-D-CustomerRefDataMgt-KYC"><b>OGN-D-CustomerRefDataMgt-KYC</b></a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>ORIGINATION-&lt;ENV&gt;</td>
+						<td><a href="https://xyz.com/ogn-d-customerrefdatamgt-kyc/browse">OGN-D-CustomerRefDataMgt-KYC</a></td>
+						<td><a href="https://sonarqube04.xyz/dashboard?id=xyz.ogn.d.customerrefdatamgt.kyc">KYC_Sonar</a></td>
+						<td>-</td>
+						</tr>
+					<tr class="rowEvenFix">
+						<td height="40">11.</td>
+						<td><a href="https://xyz/confluence/display/NRAO/PP-D-CustomerRelationshipManagement"><b>PP-D-CustomerRelationshipManagement</b></a></td>	
+						<td>CROSS_LOB-NAM</td>					
+						<td>PROF_PREF-&lt;ENV&gt;</td>					
+						<td><a href="https://xyz.com/pp-d-customerrelationshipmanagement/browse">PP-D-CustomerRelationshipManagement</a></td>
+						<td><a href="https://sonarqube04.xyz/dashboard?id=xyz.pp.d.customerrelationshipmanagement&branch=ngfg.master
+						">CustomerRelationshipManagement_Sonar</a></td>
+						<td><a href="https://xyz.com/soapuiproject_repo/browse/PP-D-CustomerRelationshipManagement-soapui-project.xml?at=refs%2Fheads%2Frelease%2F21.07">CustomerRelationshipManagement_SoapUI</a></td>
+					</tr>
+					<tr class="rowOddFix">
+						<td height="40">12.</td>
+						<td><a href="https://xyz/confluence/display/NRAO/PP-O-CustomerProfile"><b>PP-O-CustomerProfile</b></a></td>	
+						<td>RETAIL_BANK-NAM</td>					
+						<td>PROF_PREF-&lt;ENV&gt;</td>					
+						<td><a href="https://xyz.com/pp-o-customerprofile/browse">PP-O-CustomerProfile</a></td>
+						<td><a href="https://sonarqube04.xyz/dashboard?id=xyz.pp.o.customerprofile&branch=ngfg.master
+">CustomerProfile_Sonar</a></td>
+						<td>-</td>
+					</tr>
+					<tr class="rowEvenFix">
+						<td height="40">13.</td>
+						<td><a href="https://xyz/confluence/display/NRAO/AM-D-SERVICINGORDER"><b>AM-D-ServicingOrder</b></a></td>	
+						<td>CROSS_LOB-NAM</td>					
+						<td>ACCOUNT_MGMT-&lt;ENV&gt;</td>					
+						<td><a href="https://xyz.com/am-d-servicingorder/browse">AM-D-ServicingOrder</a></td>
+						<td><a href="https://sonarqube04.xyz/dashboard?id=xyz.am.d.servicingorder&branch=ngfg.master
+">ServicingOrder_Sonar</a></td>
+						<td><a href="https://xyz.com/soapuiproject_repo/browse/ServicingOrder.xml?at=refs%2Fheads%2Frelease%2F21.07">ServicingOrder_SoapUI</a></td>
+					</tr>
+					<tr class="rowOddFix">
+						<td height="40">14.</td>
+						<td><a href="https://xyz/confluence/display/NRAO/PDM-O-DebitCardManagement"><b>PDM-O-DebitCardManagement</b></a></td>	
+						<td>RETAIL_BANK-NAM</td>					
+						<td>PAYMENT_DVC-&lt;ENV&gt;</td>					
+						<td><a href="https://xyz.com/pdm-o-debitcardmanagement/browse">PDM-O-DebitCardManagement</a></td>
+						<td><a href="https://sonarqube04.xyz/dashboard?id=xyz.pdm.o.debitcardmanagement&branch=ngfg.master">DebitCardManagement_Sonar</a></td>
+						<td>-</td>
+					</tr>
+					<tr class="rowEvenFix">
+						<td height="40">15.</td>
+						<td><a href="https://xyz/confluence/display/NRAO/SVC-C-CustomerServicing-MongoDB"><b>SVC-C-CustomerServicing-MongoDB</b></a></td>	
+						<td>RETAIL_BANK-NAM</td>					
+						<td>SERVICING-&lt;ENV&gt;</td>					
+						<td><a href="https://xyz.com/svc-c-customerservicing-mongodb/browse">SVC-C-CustomerServicing-MongoDB</a></td>
+						<td><a href="https://sonarqube04.xyz/dashboard?id=xyz.svc.c.customerservicing.mongodb&branch=ngfg.master
+">CustomerServicing-MongoDB_Sonar</a></td>
+						<td>-</td>
+					</tr>
+					<tr class="rowOddFix">
+						<td height="40">16.</td>
+						<td><a href="https://xyz/confluence/display/NRAO/AVOKA+API+Service"><b>PP-C-CustomerClusterSegment</b></a></td>	
+						<td>CROSS_LOB-NAM</td>					
+						<td>PROF_PREF-&lt;ENV&gt;</td>					
+						<td><a href="https://xyz.com/pp-c-customerclustersegment/browse">PP-C-CustomerClusterSegment</a></td>
+						<td><a href="https://sonarqube04.xyz/dashboard?id=xyz.pp.c.customerclustersegment&branch=ngfg.master
+						">PP-C-CustomerClusterSegment_Sonar</a></td>
+						<td></td>
+					</tr>
+					<tr class="rowEvenFix">
+						<td height="40">17.</td>
+						<td><a href="https://xyz/confluence/display/NRAO/RTL-CUSTOMER-REL-DATA-JOB"><b>RTL-CUSTOMER-REL-DATA-JOB</b></a></td>	
+						<td></td>					
+						<td></td>					
+						<td><a href="https://xyz.com/rtl-customer-rel-data-job/browse">*RTL-CUSTOMER-REL-DATA-JOB</a></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr class="rowOddFix">
+						<td height="40">18.</td>
+						<td></td>	
+						<td>RETAIL_BANK-NAM</td>					
+						<td>FOUNDATION-&lt;ENV&gt;</td>					
+						<td><a href="https://xyz.com/fdn-v-customerservicing-js/browse">FDN-V-CustomerServicing-JS</a></td>
+						<td>-</td>
+						<td>-</td>
+					</tr>
+					<tr class="rowEvenFix">
+						<td height="40">19.</td>
+						<td><a href="https://xyz/confluence/display/NAMADM/RTL-DM-D-DocumentServices-Onboarding"><b>DM-D-DocumentServices-Onboarding</b></a></td>	
+						<td>CROSS_LOB-NAM</td>					
+						<td>DOC_MGMT-&lt;ENV&gt;</td>					
+						<td><a href="https://xyz.com/dm-d-documentservices-onboarding/browse">DM-D-DocumentServices-Onboarding</a></td>
+						<td><a href="https://sonarqube04.xyz/dashboard?id=xyz.dm.d.documentservices.onboarding&branch=ngfg.master">DM-D-DocumentServices-Onboarding Sonar</a></td>
+						<td>-</td>
+					</tr>
+					<tr class="rowOddFix">
+						<td height="40">20.</td>
+						<td><a href="https://xyz/confluence/display/NRAO/PromotionalOffersTracker-BatchJob"><b>PromotionalOffersTracker-BatchJob </b></td>	
+						<td>-</td>					
+						<td>-</td>					
+						<td><a href="https://xyz.com/promotionalofferstracker-batchjob/browse">*PromotionalOffersTracker-BatchJob </a></td>
+						<td>-</td>
+						<td>-</td>
+					</tr>
+					<tr class="rowEvenFix">
+						<td height="40">21.</td>
+						<td><a href="https://xyz/confluence/display/NRAO/FDN-O-TransDataScrapeAutomation"><b>FDN-O-TransDataScrapeAutomation</a></b></td>	
+						<td>RETAIL_BANK-NAM</td>					
+						<td>PROF_PREF-&lt;ENV&gt;</td>					
+						<td><a href="https://xyz.com/fdn-o-transdatascrapeautomation/browse">FDN-O-TransDataScrapeAutomation</a></td>
+						<td>-</td>
+						<td>-</td>
+					</tr>
+					<tr class="rowOddFix">
+						<td height="40">22.</td>
+						<td><a href="https://xyz/confluence/display/NRAO/FDN-C-PromotionalOffers"><b>FDN-C-PromotionalOffers </b></td>	
+						<td>RETAIL_BANK-NAM</td>					
+						<td>FOUNDATION -&lt;ENV&gt;</td>					
+						<td><a href="https://xyz/confluence/display/NRAO/FDN-C-PromotionalOffers">FDN-C-PromotionalOffers</a></td>
+						<td><a href="https://xyz.com">FDN-C-PromotionalOffers </a></td>
+						<td>-</td>
+					</tr>
+						<tr class="rowEvenFix">
+						<td height="40">23.</td>
+						<td>-</td>	
+						<td>-</td>					
+						<td>-</td>					
+						<td><a href="https://xyz.com/rtl-svc-c-minmax-card/browse">*RTL-SVC-C-Minmax-Card</a></td>
+						<td>-</td>
+						<td>-</td>
+					</tr>
+
+					<tr class="rowOddFix">
+						<td height="40">24.</td>
+						<td><a href="https://xyz/confluence/display/NRAO/SM-D-CUSTOMEROFFER-ONBOARDING"><b>SM-D-CustomerOffer-Onboarding</b></td>	
+						<td>CROSS_LOB-NAM</td>					
+						<td>FOUNDATION -&lt;ENV&gt;</td>					
+						<td><a href="https://xyz.com/sm-d-customeroffer-onboarding/browse">SM-D-CustomerOffer-Onboarding</a></td>
+						<td>-</td>
+						<td>-</td>
+					</tr>
+					<tr class="rowEvenFix">
+						<td height="40">25.</td>
+						<td>-</td>					
+						<td>-</td>	
+						<td>-</td>
+						<td><a href="https://xyz.com/usrao-utility_repo/browse">xyz-Utility_Repo</a></td>
+						<td><a href="https://xyz.com">Usrao.gcifutility.nam</a><br><a href="https://sonarqube04.xyz/dashboard?id=xyz.usrao.commonutility.nam">Usrao.commonutility.nam</a></td>
+						<td>-</td>
+					</tr>
+					<tr class="rowOddFix">
+						<td height="40">##</td>
+						<td><a href="https://xyz/confluence/pages/viewpage.action?spaceKey=NAMADM&title=AVOKA+Service+-+Hand+Over+Doc"><b>Confluence_ParentLink</b></a>
+						<br>
+						<a href="https://xyz/confluence/pages/viewpage.action?spaceKey=NRAO&title=APIM+Subscriptions"><b>APIM Subscriptions</b></a></td>					
+						<td>-</td>
+						<td>-</td>
+						<td><a href="https://xyz.com">Bitbucket_ParentLink</a></td>
+						<td><a href="https://xyz.com">SonarQube_ParentLink</a></td>
+						<td><a href="https://xyz.com">SoapUi_ParentLink</a></td>
+					</tr>
+					</center>
+					</table>
+		
+			<br>	<br> <br>	<br> <br>	<br>
+		
+		</div>
+						<!--<td>8.</td>
+						<td><a href="https://xyz.com.entitlement.us.release3.int" target="_blank">AST-FDN-D-AgentEntitlement-Avoka</a></td>					
+						<!--<td>ASSISTED-NAM</td>					
+						<!--<td>FOUNDATION-&lt;ENV&gt;</td>	
+                        			
+						<td>05/15/2019</td>
+						<td>Vijay/Shambhu</td>
+						<td>81.40%</td>
+<td>6h</td>
+<td>0.08%</td>
+						<td>489558</td>
+<td>jenkins-xyz.micro.xyz.entitlement.us.iut.int</td>
+						<td></td>
+						<td>XYZ_java_3_15_0_1
+						</td> -->
+						<!--<td>https://xyz.comrepos/ast-fdn-d-agententitlement-xyz_repo/browse/USRetailAgentEntitlement/src?at=refs%2Fheads%2Frelease2
+						</td>
+					</tr>
+					
+				<!--	<tr class="bronze">		
+						<td>9.</td>
+						<td><a href="https://xyz.com.sow.us.1907.int" target="_blank">RTL-OGN-D-CustomerKYCCompliance</a></td>					
+						<td>RETAIL_BANK-NAM</td>				
+						<td>ORIGINATION-&lt;ENV&gt;</td>	
+                        			
+						<td>05/15/2019</td>
+						<td>Gautam/Venkatesh</td>
+						<td>85.30%</td>
+<td>7h</td>
+<td>0.00%</td>	
+						<td>489531</td>
+<td>jenkins-xyz.micro.xyz.sow.us.iut.int</td>					
+<td></td>
+						<td>XYZ_java_3_15_0_1
+						</td>
+						<td>https://xyz.comrepos/rtl-ogn-d-customerkyccompliance_repo/browse/USRetailAPICustomerKYCCompliance/src?at=refs%2Fheads%2Frelease%2F072019
+						</td>
+					</tr>
+					<tr class="bronze">
+						<td>10.</td>
+						<td><a href="https://xyz.com.cmr.us.1907.int" target="_blank">XLN-OGN-D-CustomerSOW-CMR</a></td>					
+						<td>CROSS_LOB-NAM</td>					
+						<td>ORIGINATION-&lt;ENV&gt;</td>
+                        			
+						<td>05/15/2019</td>
+						<td>Gautam/Jonathan</td>
+						<td>94.30%</td>
+<td>1</td>
+<td>3.0%</td>
+						
+						<td>489562</td>
+<td>jenkins-xyz.micro.xyz.cmr.us.iut.int</td>						
+<td></td>
+						<td>XYZ_java_3_15_0_1
+						</td>
+						<td>https://xyz.comrepos/xln-ogn-d-customersow-cmr_repo/browse/USRetailAPICMRServices/src
+						</td>
+					</tr>
+					<tr class="bronze">	
+						<td>11.</td>
+						<td><a href="https://xyz.com?id=xyz.usretaiapi.sbprofiledomain.us.master.int" target="_blank">RTL-PP-D-SmallBusinessProfile</a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>PROF_PREF-&lt;ENV&gt;</td>	
+                        			
+						<td>05/14/2019</td>
+						<td>Akilash/Priyanka</td>
+						<td>86.80%</td>
+<td>1</td>
+<td>3.10%</td>	
+					
+						<td>Not Available</td>
+						<td>jenkins-xyz.usretaiapi.sbprofiledomain.us.master.int</td>
+<td>spring-boot-1.5.16.RELEASE
+</td>
+						<td>XYZ_java_3_15_0_1
+						</td>
+						<td>https://xyz.comrepos/rtl-pp-d-smallbusinessprofile_repo/browse
+						</td>						
+			</tr>
+					<tr class="bronze">
+						<td>12.</td>
+						<td><a href="https://gct-sonarqube.xyz/project/activity?id=xyz.xyz.sbprofilegcif.us.release3.int" target="_blank">RTL-PP-C-SmallBusinessProfile-GCIF</a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>PROF_PREF-&lt;ENV&gt;</td>	
+                        			
+						<td>05/14/2019</td>
+						<td>Akilash/Varun</td>
+						<td>84.60%</td>
+<td>1</td>
+<td>0.00%</td>	
+						<td>490042</td>
+<td>jenkins-xyz.usretaiapi.sbprofilegcif.us.master.int</td><td></td>
+						<td>XYZ_java_3_15_0_1
+							</td>
+						<td>https://xyz.comrepos/rtl-pp-c-smallbusinessprofile-gcif_repo/browse/USRetailGCIFCRUD/src?at=refs%2Fheads%2Frelease2
+						</td>
+					</tr>
+					<tr class="rowEvenFix">	
+						<td>13.</td>
+						<td><a href="https://xyz.com.balancebuilder.us.release1.int" target="_blank">AST-MM-V-ExecuteThirdPartyFunding</a></td>					
+						<td>ASSISTED-NAM</td>					
+						<td>MONEY_MVMT-&lt;ENV&gt;</td>	
+                        			
+						<td>05/16/2019</td>
+						<td>Venkatesh/Jonathan</td>
+						<td>80.10%</td>
+<td>12</td>
+<td>3.90%</td>	
+						
+						<td>Not Available</td>
+						<td>jenkins-xyz.xyz.balancebuilder.us.release1.int</td>
+				<td>Spring-Boot-1.5.22.RELEASE
+				</td>
+						<td>XYZ_java_4_17_2_0
+						</td>
+						<td>https://xyz.comrepos/ast-mm-v-executethirdpartyfunding_repo/browse/AST-MM-V-ExecuteThirdPartyFunding/src?at=refs%2Fheads%2Frelease-2
+						</td>
+					</tr>
+					<tr class="rowOddFix">	
+						<td>14.</td>
+						<td><a href="https://gct-sonarqube.xyz/project/activity?id=xyz.usretaiapi.debitcardmgmt.us.release3.int" target="_blank">RTL-PDM-D-DEBITCARDMANAGEMENT</a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>PAYMENT_DVC-&lt;ENV&gt;</td>
+                        			
+						<td>05/16/2019</td>
+						<td>Priyanka/Preshita</td>
+						<td>80.40%</td>
+<td>12</td>
+<td>4.20%</td>	
+						<td>349135</td>
+<td>jenkins-xyz.usretaiapi.debitcardmgmt.us.master.int</td>
+				<td></td>
+						<td></td>
+						<td>SF
+						</td>
+					</tr>
+					<tr class="bronze">		
+						<td>15.</td>
+						<td><a href="https://xyz.com.cardservicing.us.release3.int" target="_blank">RTL-PDM-C-CardPlastic-GCIF</a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>PAYMENT_DVC-&lt;ENV&gt;</td>
+                        			
+						<td>05/15/2019</td>
+						<td>Narendra/Laxman</td>
+				<td>93.2%</td>
+<td>1</td>
+<td>1.00%</td>	
+						
+						<td>Not Available</td>
+						<td>jenkins-xyz.xyz.cardservicing.us.master.int</td>	
+						<td>spring-boot-1.5.20.RELEASE.jar 
+						</td>
+						<td>XYZ_java_3_15_0_1
+						</td>
+						<td>https://xyz.comrepos/rtl-pdm-c-cardplastic-gcif_repo/browse
+						</td>
+					</tr>
+					<tr class="rowOddFix">	
+						<td>16.</td>
+						<td><a href="http://gpd-860-4b39.xyz:9000/dashboard?id=xyz.xyz.offers.us.release3.int" target="_blank">RTL-SM-D-Offers</a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>SALES_MKTG-&lt;ENV&gt;</td>	
+                        			
+						<td>05/15/2019</td>
+						<td>Gopal/Akash</td>
+						<td>74.00%</td>
+<td>4</td>
+<td>8.10%</td>	
+						<td>524320</td>
+						<td>jenkins-xyz.micro.xyz.offers.us.iut.int</td>
+						<td></td>
+						<td>XYZ_java_3_15_0_1
+						</td>
+						<td>https://xyz.comrepos/rtl-sm-d-offers_repo/browse/USRetailAPIOfferServices/src/main/java/com/XYZ/usretail/salesforce/offers/rest?at=refs%2Fheads%2Frelease3
+						</td>
+		</tr>
+					<tr class="bronze">	
+						<td>17.</td>
+						<td><a href="https://xyz.com?id=xyz.usretaiapi.accountdetailsahs.us.master.int" target="_blank">RTL-AM-C-AccountDetails-AHS</a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>ACCOUNT_MGMT-&lt;ENV&gt;</td>	
+                        			
+						<td>05/15/2019</td>
+						<td>Preshita/Priyanka</td>
+						<td>98.80%</td>
+<td>7h</td>
+<td>0.00%</td>	
+						<td>537404</td>
+						<td>jenkins-xyz.usretaiapi.accountdetailsahs.us.master.int</td>					
+			<td></td>
+						<td>XYZ_java_3_15_0_1
+						</td>
+						<td>https://xyz.comrepos/rtl-am-c-accountdetails-ahs_repo/browse/USRetailAHSCRUD/src?at=refs%2Fheads%2Frelease2
+						</td>
+</tr>
+					<tr class="rowOddFix">	
+						<td>18.</td>
+						<td><a href="https://xyz.com.accountaggregation.us.release3.int" target="_blank">XLN-AM-O-AccountAggregation-V2</a></td>					
+						<td>CROSS_LOB-NAM</td>					
+						<td>ACCOUNT_MGMT-&lt;ENV&gt;</td>
+                        			
+						<td>05/15/2019</td>
+						<td>Akilash/Varun</td>
+					<td>82.90%</td>
+<td>12</td>
+<td>7.00%</td>	
+						<td>545983</td>
+						<td>jenkins-xyz.xyz.accountaggregation.us.master.int</td>					
+<td></td>
+						<td></td>
+						<td>sf
+						</td>
+</tr>
+					<tr class="bronze">	
+						<td>19.</td>
+						<td><a href="https://xyz.com" target="_blank">RTL-AM-C-BankAccountDetails-V2</a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>ACCOUNT_MGMT-&lt;ENV&gt;</td>	
+                        			
+						<td>05/17/2019</td>
+						<td>Gopal/Akilash</td>
+						<td>82.00%</td>
+<td>1</td>
+<td>2.10%</td>	
+						
+						<td>525718</td>
+						<td>jenkins-xyz.micro.xyz.bankaccdetails.us.iut.int</td>					
+					<td></td>
+						<td>XYZ_java_3_15_0_1
+						</td>
+						<td>https://xyz.com
+						</td>
+			</tr>
+					<tr class="bronze">		
+						<td>20.</td>
+						<td><a href="https://xyz.com" target="_blank">RTL-AM-C-BankAccountSummary-V2</a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>ACCOUNT_MGMT-&lt;ENV&gt;</td>	
+                        			
+						<td>05/17/2019</td>
+						<td>Pavan/Akilash</td>
+						<td>88.40%</td>
+<td>1</td>
+<td>1.10%</td>	
+						<td>525703</td>
+						<td>jenkins-xyz.micro.xyz.bankaccsmry.us.iut.int</td>
+				<td></td>
+						<td>XYZ_java_3_15_0_1
+						</td>
+						<td>https://xyz.com
+						</td>
+					</tr>
+					<tr class="rowEvenFix">		
+						<td>21.</td>
+						<td><a href="https://xyz.com" target="_blank">RTL-OGN-C-RossDB</a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>ORIGINATION-&lt;ENV&gt;</td>	
+                        			
+						<td>05/16/2019</td>
+						<td>Jonathan/Venkatesh</td>
+						<td>72.20%</td>
+<td>32</td>
+<td>5.60%</td>	
+						
+						<td>491258</td>
+						<td>jenkins-xyz.xyz.us.release2.int</td>
+						<td></td>
+						<td>XYZ_java_3_15_0_1
+						</td>
+						<td>https://xyz.com
+						</td>
+					</tr> -->
+					<!--<tr class="rowOddFix">		
+						<td>9.</td>
+						<td><a href="https://xyz.com" target="_blank">RTL-DM-D-CustomerForms</a></td>				
+						<!--<td>RETAIL_BANK-NAM</td>		
+						<td>DOC_MGMT-&lt;ENV&gt;</td>			
+						<td>05/14/2019</td>
+						<td>Eesha/Srini</td>
+						<td>78.70%</td>
+<td>13</td>
+<td>4.50%</td>	
+ 						<td>573401</td>
+<td>jenkins-xyz.xyz.docmanagement.us.master.int</td>				
+						<td></td>
+						<td>XYZ_java_4_6_0_3
+						</td> -->
+						<!--<td>https://xyz.com
+						</td>
+					</tr>
+				<!--	<tr class="bronze">		
+						<td>23.</td>
+						<td><a href="https://xyz.com" target="_blank">B2B-SM-V-Prospect</a></td>					
+						<td>B2B-NAM</td>					
+						<td>SALES_MKTG-&lt;ENV&gt;</td>	
+                        			
+						<td>05/16/2019</td>
+						<td>Hema/Akilash</td>
+						<td>81.00%</td>
+<td>1</td>
+<td>0.00%</td>	
+						
+						<td>358298</td>
+						<td>jenkins-xyz.micro.xyz.prospect.us.ps.int</td>
+<td></td>
+						<td>XYZ_java_3_15_0_1
+						</td>
+						<td>https://xyz.comrepos/b2b-sm-v-prospect_repo/browse/USRetailProspectCreationService/src?at=refs%2Fheads%2Frelease2
+						</td>
+					</tr>
+					<tr class="bronze">		
+						<td>24.</td>
+						<td><a href="https://xyz.com.us.master.int" target="_blank">RTL-SVC-D-UnblockClosingCommAcct</a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>SERVICING-&lt;ENV&gt;</td>	
+                        			
+						<td>05/16/2019</td>
+						<td>Qishan/Venkatesh</td>
+						<td>90.40%</td>
+<td>1</td>
+<td>4.50%</td>	
+						
+						<td>491260</td>
+						<td>jenkins-xyz.xyz.xyz.us.release1.int</td>					
+<td>spring-boot-1.5.22.RELEASE.jar
+</td>
+						<td>XYZ_java_4_6_0_3
+						</td>
+						<td>https://xyz.comrepos/rtl-svc-d-xyz_repo/browse
+						</td>
+</tr>
+					<tr class="rowEvenFix">								
+						<td>25.</td>
+						<td><a href="https://xyz.com.us.release3.int" target="_blank">RTL-PP-O-CustomerUpdates-SF</a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>PROF_PREF-&lt;ENV&gt;</td>	
+                        			
+						<td>05/15/2019</td>
+						<td>Bryan/Shambhu</td>
+						<td>75.10%</td>
+						<td>15</td>
+<td>3.20%</td>
+
+						<td>537398</td>
+						<td>jenkins-xyz.xyz.sfcustomerupdatesorch.us.master.int</td>
+<td></td>
+						<td>XYZ_java_3_15_0_1
+						</td>
+						<td>https://xyz.comrepos/rtl-pp-o-customerupdates-sf_repo/browse/USRetail-O-CustomerUpdatesSF/src?at=refs%2Fheads%2Frelease2
+						</td>
+</tr>
+					<tr class="bronze">		
+						<td>26.</td>
+						<td><a href="https://xyz.com.sfcustomerupdatesdomain.us.release3.int" target="_blank">RTL-PP-D-CustomerUpdates </a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>PROF_PREF-&lt;ENV&gt;</td>	
+                       				
+						<td>05/17/2019</td>
+						<td>Varun/Akilash</td>
+						<td>75.60%</td>
+<td>2</td>
+<td>1.10%</td>
+	
+						<td>525646</td>
+						<td>jenkins-xyz.xyz.sfcustomerupdatesdomain.us.iut.p20.int</td>
+						<td></td>
+						<td>XYZ_java_3_15_0_1
+						</td>
+						<td>https://xyz.comrepos/rtl-pp-d-customerupdates_repo/browse/USRetailKafkaPublisher/src?at=refs%2Fheads%2Frelease4
+						</td>
+</tr>
+					<tr class="rowEvenFix">								
+						<td>27.</td>
+						<td><a href="https://xyz.com.sfcustomerupdatescrud.us.release3.int" target="_blank">RTL-PP-C-CustomerUpdates-GCIF </a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>PROF_PREF-&lt;ENV&gt;</td>	
+                        
+						<td>05/14/2019</td>
+						<td>Bryan/Akilash</td>
+						<td>71.10%</td>
+						<td>15</td>
+<td>4.40%</td>
+
+						<td>525631</td>
+						<td>jenkins-xyz.xyz.sfcustomerupdatescrud.us.master.int</td>
+						<td></td>
+						<td>XYZ_java_3_15_0_1
+						</td>
+						<td>https://xyz.comrepos/rtl-pp-c-customerupdates-gcif_repo/browse/USRetailKafkaConsumerCustUpdate/src?at=refs%2Fheads%2Frelease2
+						</td>
+</tr>
+
+
+<tr class="rowOddFix">						<td>28.</td>
+						<td><a href="https://xyz.com?id=xyz.usretaiapi.custinfovalidation.us.master.int" target="_blank">RTL-SCT-D-CustInfoValidation</a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>SECURITY</td>	
+                        			
+						<td>05/16/2019</td>
+						<td>Gopal/Akash</td>
+						<td>82.30%</td>
+<td>2</td>
+<td>2.10%</td>
+
+						<td>Not Available</td>
+						<td>jenkins-xyz.usretaiapi.custinfovalidation.us.master.int</td>
+						<td></td>
+						<td>XYZ_java_3_15_0_1
+						</td>
+						<td>https://xyz.comrepos/rtl-sct-d-custinfovalidation_repo/browse/USRetailCustInfoValidationService/src?at=refs%2Fheads%2Frelease2
+						</td>
+</tr>
+<tr class="rowEvenFix">						<td>29.</td>
+						<td><a href="https://xyz.com.accountfulfillment.us.release1.int" target="_blank">RTL-SVC-D-AccountFulfillment</a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>SERVICING-<ENV></td>	
+                        			
+						<td>05/16/2019</td>
+						<td>Venkatesh/Jonathan</td>
+						<td>71.50%</td>
+<td>44</td>
+<td>6.40%</td>
+
+						<td>Not Available</td>
+						<td>jenkins-xyz.xyz.accountfulfillment.us.release2.int</td>
+<td>Spring-Boot-1.5.22.RELEASE
+</td>
+						<td>XYZ_java_3_15_0_1
+						</td>
+						<td>https://xyz.comrepos/rtl-svc-d-accountfulfillment_repo/browse/USRetailAccountFulfillment/src?at=refs%2Fheads%2Frelease-2
+						</td>				
+</tr>
+	
+<tr class="bronze">						<td>30.</td>
+						<td><a href="http://gpd-860-4b39.xyz:9000/dashboard?id=xyz.xyz.aofundingfulfillment.us.release1.int" target="_blank">RTL-FDN-D-AOFundingFulfillment-WS</a></td>					
+						<td>RETAILBANK_NAM</td>					
+						<td>FOUNDATION</td>	
+                        			
+						<td></td>
+						<td>Venkatesh/Jonathan</td>
+						<td>81.50%</td>
+<td>1</td>
+<td>0.00%</td>
+
+						<td>Not Available</td>
+						<td>Not Available</td>
+<td>Spring-Boot-1.5.22.RELEASE
+</td>
+						<td>XYZ_java_3_15_0_1
+						</td>
+						<td>https://xyz.comrepos/rtl-fdn-d-aofundingfulfillment-ws_repo/browse/USRetailAPIFundingBatchService/src?at=refs%2Fheads%2Frelease-2
+						</td>				
+</tr>
+<tr class="rowEvenFix">						<td>31.</td>
+						<td><a href="https://xyz.com.accountfulfillment.us.release1.int" target="_blank">FDN-O-EWSPROXYWS-SF</a></td>					
+						<td>ASSISTED-NAM</td>					
+						<td>FOUNDATION<ENV></td>	
+                        			
+						<td></td>
+						<td>Akilash</td>
+						<td></td>
+<td></td>
+<td></td>
+
+						<td>Not Available</td>
+						<td></td>
+<td>
+</td>
+						<td>
+						</td>
+						<td>https://cedt-gct-bitbucket.xyz/bitbucket/projects/ESAMT/repos/fdn-o-ewsproxyws_repo/browse
+						</td>				
+</tr>
+-->
+
+
+<!--<div id="tabs-7" style="overflow: auto">
+			<table id="microserviceBasedTable" style="margin-left:25px; width: 1130px;" class="fixedTable">
+				<tbody>
+					<tr class="tableHeader">
+						<th style="width: 30px;">Sr. No.</th>
+						<th style="width: 550px;">Micro-Services Name</th>					
+						<th style="width: 275px;">PCF2 Org Name</th>					
+						<th style="width: 275px;">PCF2 Space Name</th>	
+                       				
+						<!--<th>Production Deployment date</th>
+						<th>Primary</th>
+						<th>Code Coverage in Sonar</th>
+<th>Code Smell</th>
+<th>Duplicated Blocks</th>
+						<th>RLM</th>
+						<th>Label deployed in Production</th>
+						<th>Spring boot version</th>
+						<th>Java build pack version</th>-->
+						<!--<th>Bitbucket</th>
+					</tr>
+					<tr class="rowEvenFix">	
+						<td>1.</td>
+						<td><a href="https://xyz.com.usretail.us.release1.int" target="_blank">RTL-XD-O-xyz</a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>CROSS_DMN-&lt;ENV&gt;</td>	
+                        			
+						<!--<td>05/17/2019</td>
+						<td>Laxman/Jonathan</td>
+						<td>54.20%</td>
+						<td>203</td>
+<td>12.2%</td>
+
+						<td>573383</td>
+<td>jenkins-xyz.xyz.usretail.us.release2.int</td>
+						<td></td>
+						<td>XYZ_java_3_15_0_1
+						</td>-->
+						<!--<td>https://xyz.comrepos/rtl-xd-o-usretail_repo/browse/USRetailAPI/src/test/java/com/XYZgroup/usretail/usretailao/rest/USRetailApiControllerTest.java?at=refs%2Fheads%2Frelease-2
+						</td>
+					</tr>
+					<tr class="rowOddFix">		
+						<td>2.</td>
+						<td><a href="http://gpd-860-4b39.xyz:9000/dashboard?id=xyz.xyz.dbservice.us.release1.int" target="_blank">RTL-OGN-C-ONBOARDINGDB</a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>ORIGINATION-&lt;ENV&gt;</td>	
+                        			
+						<!--<td>05/16/2019</td>
+						<td>Jonathan/Eesha</td>
+<td>42.50%</td>
+<td>151</td>
+<td>11.30%</td>	
+						<td>603560</td>	
+<td>jenkins-xyz.xyz.dbservice.us.release2.int</td>
+<td></td>
+						<td>XYZ_java_3_15_0_1
+						</td>-->
+						<!--<td>https://xyz.comrepos/rtl-ogn-c-onboardingdb_repo/browse?at=refs%2Fheads%2Frelease-2
+						</td>
+</tr>
+					<tr class="bronze">	
+						<td>3.</td>
+						<td><a href="https://xyz.com.experianbb.us.poc.int" target="_blank">RTL-OGN-C-EXPERIAN</a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>ORIGINATION-&lt;ENV&gt;</td>	
+                       				
+						<!--<td>05/17/2019</td>
+						<td>Chandra/Vivek</td>
+						<td>91.2%</td>
+<td>1</td>
+<td>2.2%</td>	
+						
+						<td>573391</td>
+<td>jenkins-xyz.xyz.experianbb.us.release2.int</td>
+<td></td>
+						<td>XYZ_java_3_8_1_3
+						</td> -->
+						<!--<td>https://xyz.comrepos/rtl-ogn-c-experian_repo/browse/USRetailAPIexperian/src?at=refs%2Fheads%2Frelease2
+						</td>
+					</tr>
+					<tr class="bronze">	
+						<td>4.</td>
+						<td><a href="http://gpd-860-4b39.xyz:9000/dashboard?id=xyz.xyz.globaldir.us.release3.int%20" target="_blank">RTL-FDN-D-GLOBALDIRECTORY</a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>FOUNDATION-&lt;ENV&gt;</td>	
+                        			
+						<!--<td>05/13/2019</td>
+						<td>Bryan/Akash</td>
+						<td>80.30%</td>
+<td>7h</td>
+<td>0.00%</td>
+						
+						<td>534374</td>
+<td>jenkins-xyz.micro.xyz.globaldir.us.iut.int</td>
+<td></td>
+						<td>XYZ_java_3_15_0_1
+						</td> -->
+						<!--<td>https://xyz.comrepos/rtl-fdn-d-globaldirectory_repo/browse/USRetailAPIEmployee/src?at=refs%2Fheads%2Frelease-2
+						</td>
+						
+					</tr>
+					<tr class="rowEvenFix">	
+						<td>5.</td>
+						<td><a href="https://xyz.com.directbankingsalesdb.us.release1.int" target="_blank">RTL-SM-C-DIRECTBANKINGSALESDB</a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>SALES_MKTG-&lt;ENV&gt;</td>	
+                        			
+						<!-- <td>05/16/2019</td>
+						<td>Venkatesh/Laxman</td>
+						<td>80.80%</td>
+<td>8</td>
+<td>1.10%</td>	
+						
+						<td>525306</td>	
+<td>jenkins-xyz.xyz.directbankingsalesdb.us.release2.int</td>	
+<td>Spring-Boot-1.5.22.RELEASE
+</td>
+						<td>XYZ_java_3_15_0_1
+						</td> -->
+						<!--<td>https://xyz.comrepos/rtl-sm-c-directbankingsalesdb_repo/browse/USRetailAPIDirectBankingSalesDB/src?at=refs%2Fheads%2Frelease-2
+						</td>
+</tr>
+					<tr class="rowOddFix">	
+						<td>6.</td>
+						<td><a href="https://gct-sonarqube.xyz/project/activity?id=xyz.xyz.checkbook.us.release3.int" target="_blank">RTL-PDM-D-CheckbookWS</a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>PAYMENT_DVC-&lt;ENV&gt;</td>
+                        
+					<!--	<td>05/16/2019</td>
+						<td>Laxman</td>
+						<td>83.2%</td>
+<td>2</td>
+<td>2.20%</td>	
+						
+						<td>488165</td>
+<td>jenkins-xyz.micro.xyz.checkbook.us.btc.int</td>
+					<td></td>
+						<td>XYZ_java_3_8_1_3
+						</td> -->
+						<!--<td>https://xyz.comrepos/rtl-pdm-d-checkbookws_repo/browse/USRetailAPICheckbookService/src?at=refs%2Fheads%2Frelease-2
+						</td>
+					</tr>
+					<tr class="bronze">
+						<td>7.</td>
+						<td><a href="https://xyz.com.onenotes.us.master.int" target="_blank">RTL-SVC-D-OneNotes</td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>SERVICING-&lt;ENV&gt;</td>	
+                        			
+						<!--<td>05/15/2019</td>
+						<td>Bryan/Varun</td>
+						<td>94.50%</td>
+<td>7h</td>
+<td>0.60%</td>
+						
+						<td>536280</td>
+<td>jenkins-xyz.micro.xyz.onenotes.us.iut.int</td>
+						<td></td>
+						<td>XYZ_java_3_15_0_1
+						</td> -->
+						<!--<td>https://xyz.comrepos/rtl-svc-d-onenotes_repo/browse/USRetailAPIOneNotes/src?at=refs%2Fheads%2Frelease2
+						</td>
+					</tr>
+					<tr class="bronze">
+						<td>8.</td>
+						<td><a href="https://xyz.com.entitlement.us.release3.int" target="_blank">AST-FDN-D-AgentEntitlement-Avoka</a></td>					
+						<!--<td>ASSISTED-NAM</td>					
+						<td>FOUNDATION-&lt;ENV&gt;</td>	
+                        			
+						<!--<td>05/15/2019</td>
+						<td>Vijay/Shambhu</td>
+						<td>81.40%</td>
+<td>6h</td>
+<td>0.08%</td>
+						<td>489558</td>
+<td>jenkins-xyz.micro.xyz.entitlement.us.iut.int</td>
+						<td></td>
+						<td>XYZ_java_3_15_0_1
+						</td> -->
+						<!--<td>https://xyz.comrepos/ast-fdn-d-agententitlement-xyz_repo/browse/USRetailAgentEntitlement/src?at=refs%2Fheads%2Frelease2
+						</td>
+					</tr>
+					
+				<!--	<tr class="bronze">		
+						<td>9.</td>
+						<td><a href="https://xyz.com.sow.us.1907.int" target="_blank">RTL-OGN-D-CustomerKYCCompliance</a></td>					
+						<td>RETAIL_BANK-NAM</td>				
+						<td>ORIGINATION-&lt;ENV&gt;</td>	
+                        			
+						<td>05/15/2019</td>
+						<td>Gautam/Venkatesh</td>
+						<td>85.30%</td>
+<td>7h</td>
+<td>0.00%</td>	
+						<td>489531</td>
+<td>jenkins-xyz.micro.xyz.sow.us.iut.int</td>					
+<td></td>
+						<td>XYZ_java_3_15_0_1
+						</td>
+						<td>https://xyz.comrepos/rtl-ogn-d-customerkyccompliance_repo/browse/USRetailAPICustomerKYCCompliance/src?at=refs%2Fheads%2Frelease%2F072019
+						</td>
+					</tr>
+					<tr class="bronze">
+						<td>10.</td>
+						<td><a href="https://xyz.com.cmr.us.1907.int" target="_blank">XLN-OGN-D-CustomerSOW-CMR</a></td>					
+						<td>CROSS_LOB-NAM</td>					
+						<td>ORIGINATION-&lt;ENV&gt;</td>
+                        			
+						<td>05/15/2019</td>
+						<td>Gautam/Jonathan</td>
+						<td>94.30%</td>
+<td>1</td>
+<td>3.0%</td>
+						
+						<td>489562</td>
+<td>jenkins-xyz.micro.xyz.cmr.us.iut.int</td>						
+<td></td>
+						<td>XYZ_java_3_15_0_1
+						</td>
+						<td>https://xyz.comrepos/xln-ogn-d-customersow-cmr_repo/browse/USRetailAPICMRServices/src
+						</td>
+					</tr>
+					<tr class="bronze">	
+						<td>11.</td>
+						<td><a href="https://xyz.com?id=xyz.usretaiapi.sbprofiledomain.us.master.int" target="_blank">RTL-PP-D-SmallBusinessProfile</a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>PROF_PREF-&lt;ENV&gt;</td>	
+                        			
+						<td>05/14/2019</td>
+						<td>Akilash/Priyanka</td>
+						<td>86.80%</td>
+<td>1</td>
+<td>3.10%</td>	
+					
+						<td>Not Available</td>
+						<td>jenkins-xyz.usretaiapi.sbprofiledomain.us.master.int</td>
+<td>spring-boot-1.5.16.RELEASE
+</td>
+						<td>XYZ_java_3_15_0_1
+						</td>
+						<td>https://xyz.comrepos/rtl-pp-d-smallbusinessprofile_repo/browse
+						</td>						
+			</tr>
+					<tr class="bronze">
+						<td>12.</td>
+						<td><a href="https://gct-sonarqube.xyz/project/activity?id=xyz.xyz.sbprofilegcif.us.release3.int" target="_blank">RTL-PP-C-SmallBusinessProfile-GCIF</a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>PROF_PREF-&lt;ENV&gt;</td>	
+                        			
+						<td>05/14/2019</td>
+						<td>Akilash/Varun</td>
+						<td>84.60%</td>
+<td>1</td>
+<td>0.00%</td>	
+						<td>490042</td>
+<td>jenkins-xyz.usretaiapi.sbprofilegcif.us.master.int</td><td></td>
+						<td>XYZ_java_3_15_0_1
+							</td>
+						<td>https://xyz.comrepos/rtl-pp-c-smallbusinessprofile-gcif_repo/browse/USRetailGCIFCRUD/src?at=refs%2Fheads%2Frelease2
+						</td>
+					</tr>
+					<tr class="rowEvenFix">	
+						<td>13.</td>
+						<td><a href="https://xyz.com.balancebuilder.us.release1.int" target="_blank">AST-MM-V-ExecuteThirdPartyFunding</a></td>					
+						<td>ASSISTED-NAM</td>					
+						<td>MONEY_MVMT-&lt;ENV&gt;</td>	
+                        			
+						<td>05/16/2019</td>
+						<td>Venkatesh/Jonathan</td>
+						<td>80.10%</td>
+<td>12</td>
+<td>3.90%</td>	
+						
+						<td>Not Available</td>
+						<td>jenkins-xyz.xyz.balancebuilder.us.release1.int</td>
+				<td>Spring-Boot-1.5.22.RELEASE
+				</td>
+						<td>XYZ_java_4_17_2_0
+						</td>
+						<td>https://xyz.comrepos/ast-mm-v-executethirdpartyfunding_repo/browse/AST-MM-V-ExecuteThirdPartyFunding/src?at=refs%2Fheads%2Frelease-2
+						</td>
+					</tr>
+					<tr class="rowOddFix">	
+						<td>14.</td>
+						<td><a href="https://gct-sonarqube.xyz/project/activity?id=xyz.usretaiapi.debitcardmgmt.us.release3.int" target="_blank">RTL-PDM-D-DEBITCARDMANAGEMENT</a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>PAYMENT_DVC-&lt;ENV&gt;</td>
+                        			
+						<td>05/16/2019</td>
+						<td>Priyanka/Preshita</td>
+						<td>80.40%</td>
+<td>12</td>
+<td>4.20%</td>	
+						<td>349135</td>
+<td>jenkins-xyz.usretaiapi..us.master.int</td>
+				<td></td>
+						<td></td>
+						<td>SF
+						</td>
+					</tr>
+					<tr class="bronze">		
+						<td>15.</td>
+						<td><a href="https://xyz.com.cardservicing.us.release3.int" target="_blank">RTL-PDM-C-CardPlastic-GCIF</a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>PAYMENT_DVC-&lt;ENV&gt;</td>
+                        			
+						<td>05/15/2019</td>
+						<td>Narendra/Laxman</td>
+				<td>93.2%</td>
+<td>1</td>
+<td>1.00%</td>	
+						
+						<td>Not Available</td>
+						<td>jenkins-xyz.xyz.cardservicing.us.master.int</td>	
+						<td>spring-boot-1.5.20.RELEASE.jar 
+						</td>
+						<td>XYZ_java_3_15_0_1
+						</td>
+						<td>https://xyz.comrepos/rtl-pdm-c-cardplastic-gcif_repo/browse
+						</td>
+					</tr>
+					<tr class="rowOddFix">	
+						<td>16.</td>
+						<td><a href="http://gpd-860-4b39.xyz:9000/dashboard?id=xyz.xyz.offers.us.release3.int" target="_blank">RTL-SM-D-Offers</a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>SALES_MKTG-&lt;ENV&gt;</td>	
+                        			
+						<td>05/15/2019</td>
+						<td>Gopal/Akash</td>
+						<td>74.00%</td>
+<td>4</td>
+<td>8.10%</td>	
+						<td>524320</td>
+						<td>jenkins-xyz.micro.xyz.offers.us.iut.int</td>
+						<td></td>
+						<td>XYZ_java_3_15_0_1
+						</td>
+						<td>https://xyz.comrepos/rtl-sm-d-offers_repo/browse/USRetailAPIOfferServices/src/main/java/com/XYZ/usretail/salesforce/offers/rest?at=refs%2Fheads%2Frelease3
+						</td>
+		</tr>
+					<tr class="bronze">	
+						<td>17.</td>
+						<td><a href="https://xyz.com?id=xyz.usretaiapi.accountdetailsahs.us.master.int" target="_blank">RTL-AM-C-AccountDetails-AHS</a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>ACCOUNT_MGMT-&lt;ENV&gt;</td>	
+                        			
+						<td>05/15/2019</td>
+						<td>Preshita/Priyanka</td>
+						<td>98.80%</td>
+<td>7h</td>
+<td>0.00%</td>	
+						<td>537404</td>
+						<td>jenkins-xyz...us.master.int</td>					
+			<td></td>
+						<td>XYZ_java_3_15_0_1
+						</td>
+						<td>https://xyz.comrepos/rtl-am-c-accountdetails-ahs_repo/browse/USRetailAHSCRUD/src?at=refs%2Fheads%2Frelease2
+						</td>
+</tr>
+					<tr class="rowOddFix">	
+						<td>18.</td>
+						<td><a href="https://xyz.com.accountaggregation.us.release3.int" target="_blank">XLN-AM-O-AccountAggregation-V2</a></td>					
+						<td>CROSS_LOB-NAM</td>					
+						<td>ACCOUNT_MGMT-&lt;ENV&gt;</td>
+                        			
+						<td>05/15/2019</td>
+						<td>Akilash/Varun</td>
+					<td>82.90%</td>
+<td>12</td>
+<td>7.00%</td>	
+						<td>545983</td>
+						<td>jenkins-xyz.xyz.accountaggregation.us.master.int</td>					
+<td></td>
+						<td></td>
+						<td>sf
+						</td>
+</tr>
+					<tr class="bronze">	
+						<td>19.</td>
+						<td><a href="https://xyz.com.bankaccountdetails.us.release3.int" target="_blank">RTL-AM-C-BankAccountDetails-V2</a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>ACCOUNT_MGMT-&lt;ENV&gt;</td>	
+                        			
+						<td>05/17/2019</td>
+						<td>Gopal/Akilash</td>
+						<td>82.00%</td>
+<td>1</td>
+<td>2.10%</td>	
+						
+						<td>525718</td>
+						<td>jenkins-xyz.micro.xyz.bankaccdetails.us.iut.int</td>					
+					<td></td>
+						<td>XYZ_java_3_15_0_1
+						</td>
+						<td>https://xyz.comrepos/rtl-am-c-bankaccountdetails_repo/browse/RTL-AM-C-BankAccountDetails-V2/src?at=refs%2Fheads%2Frelease2
+						</td>
+			</tr>
+					<tr class="bronze">		
+						<td>20.</td>
+						<td><a href="https://xyz.com.bankaccountsummary.us.master.int" target="_blank">RTL-AM-C-BankAccountSummary-V2</a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>ACCOUNT_MGMT-&lt;ENV&gt;</td>	
+                        			
+						<td>05/17/2019</td>
+						<td>Pavan/Akilash</td>
+						<td>88.40%</td>
+<td>1</td>
+<td>1.10%</td>	
+						<td>525703</td>
+						<td>jenkins-xyz.micro.xyz.bankaccsmry.us.iut.int</td>
+				<td></td>
+						<td>XYZ_java_3_15_0_1
+						</td>
+						<td>https://xyz.comrepos/rtl-am-c-bankaccountsummary_repo/browse/RTL-AM-C-BankAccountSummary-V2/src?at=refs%2Fheads%2Frelease2
+						</td>
+					</tr>
+					<tr class="rowEvenFix">		
+						<td>21.</td>
+						<td><a href="https://xyz.com.mongodbservice.us.release1.int" target="_blank">RTL-OGN-C-RossDB</a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>ORIGINATION-&lt;ENV&gt;</td>	
+                        			
+						<td>05/16/2019</td>
+						<td>Jonathan/Venkatesh</td>
+						<td>72.20%</td>
+<td>32</td>
+<td>5.60%</td>	
+						
+						<td>491258</td>
+						<td>jenkins-xyz.xyz.us.release2.int</td>
+						<td></td>
+						<td>XYZ_java_3_15_0_1
+						</td>
+						<td>https://xyz.comrepos/rtl-ogn-c-rossdb_repo/browse/USRetailAPIMongoService/src?at=refs%2Fheads%2Frelease-2
+						</td>
+					</tr> -->
+					<!--<tr class="rowOddFix">		
+						<td>9.</td>
+						<td><a href="https://gct-sonarqube.xyz/project/activity?id=xyz.xyz.docmanagement.us.release2.int" target="_blank">RTL-DM-D-CustomerForms</a></td>				
+						<td>RETAIL_BANK-NAM</td>		
+						<td>DOC_MGMT-&lt;ENV&gt;</td>	
+                        <!--			
+						<td>05/14/2019</td>
+						<td>Eesha/Srini</td>
+						<td>78.70%</td>
+<td>13</td>
+<td>4.50%</td>	
+ 						<td>573401</td>
+<td>jenkins-xyz.xyz.docmanagement.us.master.int</td>				
+						<td></td>
+						<td>XYZ_java_4_6_0_3
+						</td> -->
+						<!--<td>https://xyz.comrepos/rtl-dm-d-customerforms_repo/browse/USRetailAPICustomerForms?at=refs%2Fheads%2Frelease-2
+						</td>
+					</tr> -->
+				<!--	<tr class="bronze">		
+						<td>23.</td>
+						<td><a href="https://xyz.com.prospect.us.master.int" target="_blank">B2B-SM-V-Prospect</a></td>					
+						<td>B2B-NAM</td>					
+						<td>SALES_MKTG-&lt;ENV&gt;</td>	
+                        			
+						<td>05/16/2019</td>
+						<td>Hema/Akilash</td>
+						<td>81.00%</td>
+<td>1</td>
+<td>0.00%</td>	
+						
+						<td>358298</td>
+						<td>jenkins-xyz.micro.xyz.prospect.us.ps.int</td>
+<td></td>
+						<td>XYZ_java_3_15_0_1
+						</td>
+						<td>https://xyz.comrepos/b2b-sm-v-prospect_repo/browse/USRetailProspectCreationService/src?at=refs%2Fheads%2Frelease2
+						</td>
+					</tr>
+					<tr class="bronze">		
+						<td>24.</td>
+						<td><a href="https://xyz.com.us.master.int" target="_blank">RTL-SVC-D-UnblockClosingCommAcct</a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>SERVICING-&lt;ENV&gt;</td>	
+                        			
+						<td>05/16/2019</td>
+						<td>Qishan/Venkatesh</td>
+						<td>90.40%</td>
+<td>1</td>
+<td>4.50%</td>	
+						
+						<td>491260</td>
+						<td>jenkins-xyz.xyz.xyz.us.release1.int</td>					
+<td>spring-boot-1.5.22.RELEASE.jar
+</td>
+						<td>XYZ_java_4_6_0_3
+						</td>
+						<td>https://xyz.comrepos/rtl-svc-d-xyz_repo/browse
+						</td>
+</tr>
+					<tr class="rowEvenFix">								
+						<td>25.</td>
+						<td><a href="https://xyz.com.us.release3.int" target="_blank">RTL-PP-O-CustomerUpdates-SF</a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>PROF_PREF-&lt;ENV&gt;</td>	
+                        			
+						<td>05/15/2019</td>
+						<td>Bryan/Shambhu</td>
+						<td>75.10%</td>
+						<td>15</td>
+<td>3.20%</td>
+
+						<td>537398</td>
+						<td>jenkins-xyz.xyz.</td>
+<td></td>
+						<td>XYZ_java_3_15_0_1
+						</td>
+						<td>https://xyz.comrepos/rtl-pp-o-customerupdates-sf_repo/browse/USRetail-O-CustomerUpdatesSF/src?at=refs%2Fheads%2Frelease2
+						</td>
+</tr>
+					<tr class="bronze">		
+						<td>26.</td>
+						<td><a href="https://xyz.com.sfcustomerupdatesdomain.us.release3.int" target="_blank">RTL-PP-D-CustomerUpdates </a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>PROF_PREF-&lt;ENV&gt;</td>	
+                       				
+						<td>05/17/2019</td>
+						<td>Varun/Akilash</td>
+						<td>75.60%</td>
+<td>2</td>
+<td>1.10%</td>
+	
+						<td>525646</td>
+						<td>jenkins-xyz.xyz.sfcustomerupdatesdomain.us.iut.p20.int</td>
+						<td></td>
+						<td>XYZ_java_3_15_0_1
+						</td>
+						<td>https://xyz.comrepos/rtl-pp-d-customerupdates_repo/browse/USRetailKafkaPublisher/src?at=refs%2Fheads%2Frelease4
+						</td>
+</tr>
+					<tr class="rowEvenFix">								
+						<td>27.</td>
+						<td><a href="https://xyz.com.sfcustomerupdatescrud.us.release3.int" target="_blank">RTL-PP-C-CustomerUpdates-GCIF </a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>PROF_PREF-&lt;ENV&gt;</td>	
+                        
+						<td>05/14/2019</td>
+						<td>Bryan/Akilash</td>
+						<td>71.10%</td>
+						<td>15</td>
+<td>4.40%</td>
+
+						<td>525631</td>
+						<td>jenkins-xyz.xyz.sfcustomerupdatescrud.us.master.int</td>
+						<td></td>
+						<td>XYZ_java_3_15_0_1
+						</td>
+						<td>https://xyz.comrepos/rtl-pp-c-customerupdates-gcif_repo/browse/USRetailKafkaConsumerCustUpdate/src?at=refs%2Fheads%2Frelease2
+						</td>
+</tr>
+
+
+<tr class="rowOddFix">						<td>28.</td>
+						<td><a href="https://xyz.com?id=xyz.usretaiapi.custinfovalidation.us.master.int" target="_blank">RTL-SCT-D-CustInfoValidation</a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>SECURITY</td>	
+                        			
+						<td>05/16/2019</td>
+						<td>Gopal/Akash</td>
+						<td>82.30%</td>
+<td>2</td>
+<td>2.10%</td>
+
+						<td>Not Available</td>
+						<td>jenkins-xyz.usretaiapi.custinfovalidation.us.master.int</td>
+						<td></td>
+						<td>XYZ_java_3_15_0_1
+						</td>
+						<td>https://xyz.com
+						</td>
+</tr>
+<tr class="rowEvenFix">						<td>29.</td>
+						<td><a href="https://xyz.com" target="_blank">RTL-SVC-D-AccountFulfillment</a></td>					
+						<td>RETAIL_BANK-NAM</td>					
+						<td>SERVICING-<ENV></td>	
+                        			
+						<td>05/16/2019</td>
+						<td>Venkatesh/Jonathan</td>
+						<td>71.50%</td>
+<td>44</td>
+<td>6.40%</td>
+
+						<td>Not Available</td>
+						<td>jenkins-xyz.xyz.accountfulfillment.us.release2.int</td>
+<td>Spring-Boot-1.5.22.RELEASE
+</td>
+						<td>XYZ_java_3_15_0_1
+						</td>
+						<td>https://xyz.com
+						</td>				
+</tr>
+	
+<tr class="bronze">						<td>30.</td>
+						<td><a href="https://xyz.com" target="_blank">RTL-FDN-D-AOFundingFulfillment-WS</a></td>					
+						<td>RETAILBANK_NAM</td>					
+						<td>FOUNDATION</td>	
+                        			
+						<td></td>
+						<td>Venkatesh/Jonathan</td>
+						<td>81.50%</td>
+<td>1</td>
+<td>0.00%</td>
+
+						<td>Not Available</td>
+						<td>Not Available</td>
+<td>Spring-Boot-1.5.22.RELEASE
+</td>
+						<td>XYZ_java_3_15_0_1
+						</td>
+						<td>https://xyz.com
+						</td>				
+</tr>
+<tr class="rowEvenFix">						<td>31.</td>
+						<td><a href="https://xyz.com" target="_blank">FDN-O-EWSPROXYWS-SF</a></td>					
+						<td>ASSISTED-NAM</td>					
+						<td>FOUNDATION<ENV></td>	
+                        			
+						<td></td>
+						<td>Akilash</td>
+						<td></td>
+<td></td>
+<td></td>
+
+						<td>Not Available</td>
+						<td></td>
+<td>
+</td>
+						<td>
+						</td>
+						<td>https://xyz.com
+						</td>				
+</tr>
+
+
+				</tbody>			
+			</table>
+		
+		</div>
+		<div id="tabs-7" style="overflow: auto;">
+			<table id="microappsBasedTable" style="margin-left:25px; width: 1130px;" class="fixedTable">
+				<tbody>
+					<!-- <tr class="tableHeader">	
+						<th style="width: 30px;">Sr. No.</th>
+						<th style="width: 550px;">Micro-Apps Name</th>					
+						<th style="width: 275px;">PCF Org Name</th>					
+						<th style="width: 275px;">PCF Space Name</th>	
+	                   
+						<th>Production Deployment date</th>
+						<th>Primary</th>
+						
+<th>Code Coverage in Sonar</th>
+<th>code smell</th>
+<th>Duplicated Blocks</th>
+<th>RLM</th>	
+<th>Label deployed in Production</th>	
+<th>Spring boot version</th>
+<th>Java build pack version</th>
+<th>Bitbucket</th>				
+					</tr>
+					
+					<tr class="rowEvenFix">								
+						<td>1.</td>
+						<td><a href="https://xyz.com" target="_blank">AST-PP-V-CustomerSecureDataJS</a></td>					
+						<td>ASSISTED-NAM</td>					
+						<td>PROF_PREF-<ENV></td>	
+                        			
+						
+						<td>05/17/2019</td>
+						<td>Sadhana/Karthik</td>
+						<td>71.6%</td><td>2</td>
+<td>4.70%</td>
+						<td>Not Available</td>
+						<td>jenkins-</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr class="rowOddFix">	
+						<td>2.</td>					
+						<td><a href="https://xyz.com" target="_blank"> AST-OGN-V-Onboarding-DBSales-JS</a></td>					
+						<td>ASSISTED-NAM</td>					
+						<td>ORIGINATION-&lt;ENV&gt;</td>					
+						
+						<td>05/19/2019</td>
+						<td>Mani/Chandra</td>
+						<td>67.60%</td>
+<td>14</td>
+<td>1.50%</td>
+<td>636410</td>
+<td>jenkins</td>
+<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr class="rowEvenFix">	
+						<td>3.</td>
+						<td>AST-MM-V-ExecuteThirdPartyFundingWeb</td>					
+						<td>ASSISTED-NAM</td>					
+						<td>MONEY_MVMT-&lt;ENV&gt;</td>
+                        
+						<td></td>
+						<td>Vijay</td>
+						<td>Not Available</td>
+						<td>Not Available</td>
+						<td>Not Available</td>
+						<td>Not Available</td>
+						<td>Not Available</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr class="rowOddFix">						<td>4.</td>
+						<td><a href="https://xyz.com</a></td>					
+						<td>ASSISTED-NAM</td>					
+						<td>SECURITY</td>	
+                        			
+						<td></td>
+						<td>Sadhana</td>
+						<td>80.00%</td>
+<td>4</td>
+<td>0.00%</td>
+
+						<td>Not Available</td>
+						<td>Not Available</td>
+						<td></td>
+						<td></td>
+						<td></td>
+</tr>
+				</tbody>	-->		
+					
+	</div>
+</section>
+
+<section id="referencesMainTab" class="tab-content hide">
+   <div style="position: relative;">
+		
+			<ul style="font-size: 13px;">
+				<li><a href="#tabs-8" id="links">Links</a></li>
+				<li><a href="#tabs-9" id="support">Support Teams</a></li>
+				<li><a href="#tabs-10" id="snow">SNOW Templates</a></li>
+			</ul>
+		<!-- <div id="linksBasedTable"class="wrapper">
+			<div id="div1">
+				<div id="tabs-8" style="overflow: auto;">
+					<table style="margin-left:0px; margin-top:30px; width: 400px;" class="fixedTable">
+						<tbody>
+							<tr class="tableHeader">					
+								<th>Generic</th>
+							</tr>
+							<tr class="rowEvenFix">					
+								<td><a href="https://xyz/USRT/" target="_blank">API SharePoint</td>
+								<td><a href="https://xyz/grou" target="_blank">Collaborate</td>		
+								<td><a href="https://xyz/control/main" target="_blank">MarketPlace CMP</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>	
+			</div>
+			<div id="div1">
+				<div id="tabs-8" style="overflow: auto;">
+					<table style="margin-left:24px; margin-top:47px; width: 400px;" class="fixedTable">
+						<tbody>
+							<tr class="tableHeader">					
+								<th>CI/CD</th>
+							</tr>
+							<tr class="rowEvenFix">					
+								<td><a href="https://xyz.com" target="_blank">RTC Web</td>
+								<td><a href="https://xyz.com" target="_blank">Jenkins</td>
+								<td><a href="https://xyz.com" target="_blank">RLM</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>	
+			</div> -->
+			<div id="linksBasedTable">
+				<div id="tabs-8" style="overflow: auto;">
+					<table style="margin-left:20px; margin-top:12px; width: 880px;" class="fixedTable">
+						<tbody>
+							<tr class="tableHeader">					
+								<th colspan="4">Generic</th>
+							</tr>
+							<tr>					
+								<td class="rowEvenFixlinks" style=" width: 220px;"><a href="https://xyz.com" target="_blank">Pview</td>
+								<td class="rowOddFixlinks" style=" width: 220px;"><a href="https://xyz.com" target="_blank">eset</td>		
+								<td class="rowEvenFixlinks" style=" width: 220px;"><a href="https://xyz.com" target="_blank">MaetPlace CMP</td>
+								<td class="rowOddFixlinks" style=" width: 220px;"><a href="https://xyz.com?" target="_blank">Gbal Dir</td>
+							</tr>
+							<!--<tr>					
+								<td class="rowOddFixlinks" style=" width: 220px;"></td>	
+								<td class="rowEvenFixlinks" style=" width: 220px;"></td>
+								<td class="rowOddFixlinks" style=" width: 220px;"></td>
+								<td class="rowEvenFixlinks" style=" width: 220px;"></td>
+							</tr>-->
+						</tbody>
+					</table>
+					<table style="margin-left:20px; margin-top:15px; width: 880px;" class="fixedTable">
+						<tbody>
+							<tr class="tableHeader">					
+								<th colspan="4">CI/CD & Process</th>
+							</tr>
+							<tr>					
+								<td class="rowEvenFixlinks" style=" width: 220px;"><a href="https://xyz.com" target="_blank">YMLility</td>
+								<td class="rowOddFixlinks" style=" width: 220px;"><a href="https://xyz.com" target="_blank">Jkins</td>
+								<td class="rowEvenFixlinks" style=" width: 220px;"><a href="https://xyz.com" target="_blank">RM</td>
+								<td class="rowOddFixlinks" style=" width: 220px;"><a href="https://xyz.com" target="_blank">IF MLI</td>
+							</tr>
+							<tr>					
+								<td class="rowOddFixlinks" style=" width: 220px;"><a href="https://xyz.com">Validator</td>	
+								<td class="rowEvenFixlinks" style=" width: 220px;"><a href="https://xyz.com" target="_blank">APIortal</td>
+								<td class="rowOddFixlinks" style=" width: 220px;"><a href="https://xyz.com" target="_blank">Onbto ine Utility</td>
+								<td class="rowEvenFixlinks" style=" width: 220px;"><a href="https://xyz.com" target="_blank">BlaDuck</td>
+							</tr>
+							<tr>					
+								<td class="rowEvenFixlinks" style=" width: 220px;"><a href="https://xyz.com">Transaager</td>	
+								<td class="rowOddFixlinks" style=" width: 220px;"><a href="https://xyz.com">Jir</td>
+								<td class="rowEvenFixlinks" style=" width: 220px;"><a href="https://xyz.com" target="_blank">QC</td></td>
+								<td class="rowOddFixlinks" style=" width: 220px;"><a href="https://xyz.com" target="_blank">Spl</td>
+							</tr>
+							<tr>					
+								<td class="rowOddFixlinks" style=" width: 220px;"><a href="https://xyz.com" target="_blank">SNW</td>	
+								<td class="rowEvenFixlinks" style=" width: 220px;"><a href="https://xyz.com">SWGER</td>
+								<td class="rowOddFixlinks" style=" width: 220px;"><a href="https://xyz.com" target="_blank">SN</td>
+								<td class="rowEvenFixlinks" style=" width: 220px;"><a href="https://xyz.com" target="_blank">Infrastrue Automation Portal</td>
+							</tr>
+							<!--<tr>					
+								<td class="rowOddFixlinks" style=" width: 220px;"></td>	
+								<td class="rowEvenFixlinks" style=" width: 220px;"></td>
+								<td class="rowOddFixlinks" style=" width: 220px;"></td>
+								<td class="rowEvenFixlinks" style=" width: 220px;"></td>
+							</tr>
+							-->
+						</tbody>
+					</table>
+					<table style="margin-left:20px; margin-top:15px; width: 880px;" class="fixedTable">
+						<tbody>
+							<tr class="tableHeader">					
+								<th colspan="4">Sharepoint links</th>
+							</tr>
+							<tr>					
+								<td class="rowEvenFixlinks" style=" width: 220px;"><a href="https://xyz/xyz/" target="_blank">USRPI</td>	
+								<td class="rowOddFixlinks" style=" width: 220px;"><a href="https://xyz/xyz/_layouts/15/" target="_blank">List of BchJobs</td>
+								<td class="rowEvenFixlinks" style=" width: 220px;"><a href="https://xyz/xyz/Shared%20Documents/">Solce</td>
+								<td class="rowOddFixlinks" style=" width: 220px;"><a href="https://xyz/xyz/SitePages/">APoarding</td>
+							</tr>
+							<tr>					
+								<td class="rowOddFixlinks" style=" width: 220px;"><a href="https://xyz/USRT/Sales" target="_blank">RLerence Guide</td></td>	
+								<td class="rowEvenFixlinks" style=" width: 220px;"><a href="https://xyz/USRT/Sales%20and%20Servicing/" target="_blank">PSference Guide</td>
+								<td class="rowOddFixlinks" style=" width: 220px;"><a href="https://xyz/xyz/_layouts/15">CredHub</td>
+								<td class="rowEvenFixlinks" style=" width: 220px;"><a href="https://xyz/USRT/" target="_blank">NGocess</td>
+							</tr>
+							<tr>					
+								<td class="rowEvenFixlinks" style=" width: 220px;"><a href="https://xyz/xyz/SitePages" target="_blank">QuDocs</td>
+								<td class="rowOddFixlinks" style=" width: 220px;"><a href="https://xyz/USRT/" target="_blank">Sales and Servicing</td>
+								<td class="rowEvenFixlinks" style=" width: 220px;"><a href="https://xyz/xyz/_layouts/15/xyz/" target="_blank">CMPare List</td>
+								<td class="rowOddFixlinks" style=" width: 220px;"><a href="https://xyz/sites/xyz/" target="_blank">Avoka Training</td>
+							</tr>
+							<tr>					
+								<td class="rowOddFixlinks" style=" width: 220px;"><a href="https://xyz/xyz/_layouts/15/xyz/xyz/APIM%20Products.docx&action=default" target="_blank">APIucts</td></td>	
+								<td class="rowEvenFixlinks" style=" width: 220px;"><a href="https://xyz/xyz" target="_blank">RL XYZ Releases</td>
+								<td class="rowOddFixlinks" style=" width: 220px;"><a href="https://xyz/xyz/SitePages/ORAAS%20DB%20CIs.aspx" target="_blank">ORAAS DB CLs</td>
+								<td class="rowEvenFixlinks" style=" width: 220px;"><a href="https://xyz/xyz/" target="_blank">17oServices</td>
+							</tr>
+							<tr>					
+								<td class="rowEvenFixlinks" style=" width: 220px;"><a href="https://xyz/xyz/_layouts/15/xyz/" target="_blank">Instance DeO MicroServices</td>	
+								<td class="rowOddFixlinks" style=" width: 220px;"><a href="https://xyz/xyz/_layouts/15/xyz/x" target="_blank">MinMetails</td>
+								<td class="rowEvenFixlinks" style=" width: 220px;"><a href="https://xyz/xyz/_layout" target="_blank">Avonal Flow - PPT</td>
+								<td class="rowOddFixlinks" style=" width: 220px;"><a href="https://xyz/xyz/_layouts/15/xyz/" target="_blank">Product Description</td>
+							</tr>
+						</tbody>
+					</table>
+					<table style="margin-left:20px; margin-top:15px; width: 880px;" class="fixedTable">
+						<tbody>
+							<tr class="tableHeader">					
+								<th colspan="4">Miscellaneous</th>
+							</tr>
+							<tr>	
+								<td class="rowEvenFixlinks" style=" width: 220px;"><a href="https://xyz/site" target="_blank">PCwners</td>
+								<td class="rowOddFixlinks" style=" width: 220px;"><a href="https://xyz/docs/DOC-680734" target="_blank">Pipeline Confed</td>
+								<td class="rowEvenFixlinks" style=" width: 220px;"><a href="https://xyz/" target="_blank">GoForluence</td>
+								<td class="rowOddFixlinks" style=" width: 220px;"><a href="https://xyz/" target="_blank">RetailTeam Confluence</td>
+							</tr>
+							<tr>					
+								<td class="rowOddFixlinks" style=" width: 220px;"><a href="https://xyz/docs/DOC-620032" target="_blank">Pipelinde</td>	
+								<td class="rowEvenFixlinks" style=" width: 220px;"><a href="https://xyz/sites/" target="_blank">PSG Deployment Guide</td>
+								<td class="rowOddFixlinks" style=" width: 220px;"><a href="https://xyz/archcntr/">Architectur</td>
+								<td class="rowEvenFixlinks" style=" width: 220px;"><a href="https://xyz/groups/usrt-microservices-microapps" target="_blank">Collabo</td>
+							</tr>
+							<tr>	
+								<td class="rowEvenFixlinks" style=" width: 220px;"><a href="https://xyz/xyz/_layouts/" target="_blank">Steps fnboarding</td>
+								<td class="rowOddFixlinks" style=" width: 220px;"><a href="https://xyz/xyz/_layouts/15/" target="_blank">StatuAdoption</td>
+								<td class="rowEvenFixlinks" style=" width: 220px;"><a href="https://xyz/" target="_blank">Black Duck</td>
+								<td class="rowOddFixlinks" style=" width: 220px;"><a href="https://xyz/confluenc" target="_blank">Teaalendar</td>
+							</tr>
+						</tbody>
+					</table>
+					<br><br>
+				</div>
+			</div>			
+		<!-- <div id="linksBasedTable"class="wrapper">
+			<div id="div1">
+				<div id="tabs-8" style="overflow: auto;">
+					<table style="margin-left:0px; margin-top:30px; width: 250px;" class="fixedTable">
+						<tbody>
+							<tr class="tableHeader">					
+								<th>Generic</th>
+							</tr>
+							<tr class="rowEvenFix">					
+								<td><a href="https://xyz/USRT/" target="_blank">API SharePoint</td>		
+							</tr>
+							<tr class="rowOddFix">					
+								<td><a href="https://xyz/groups/usrt-microservices-microapps" target="_blank">Collaborate</td>
+							</tr>
+							<tr class="rowEvenFix">					
+								<td><a href="https://" target="_blank">MarketPlace CMP</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>	
+			</div>
+			<div id="div1">
+				<div id="tabs-8" style="overflow: auto;">
+					<table style="margin-left:24px; margin-top:47px; width: 250px;" class="fixedTable">
+						<tbody>
+							<tr class="tableHeader">					
+								<th>CI/CD</th>
+							</tr>
+							<tr class="rowEvenFix">					
+								<td><a href="https://xz/" target="_blank">RTC Web</td>		
+							</tr>
+							<tr class="rowOddFix">					
+								<td><a href="https://xyz.net/job/NAM/job/xyz/job/retailmicroservices_pcf/" target="_blank">Jenkins</td>
+							</tr>
+							<tr class="rowEvenFix">					
+								<td><a href="https://xxxXYZbrpm/" target="_blank">RLM</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>	
+			</div>
+			<div id="div1">
+				<div id="tabs-8" style="overflow: auto;">
+					<table style="margin-left:24px; margin-top:47px; width: 250px;" class="fixedTable">
+						<tbody>
+							<tr class="tableHeader">					
+								<th>Process</th>
+							</tr>
+							<tr class="rowEvenFix">					
+								<td><a href="https://servicemanagement.XYZgroup.net/navpage.do" target="_blank">SNOW</td>		
+							</tr>
+							<tr class="rowOddFix">					
+								<td><a href="https://xyz/archcntr/tools/archcenter/newportal/Portal.aspx?pageid=3" target="_blank">Architecture Center</td>
+							</tr>
+							<tr class="rowEvenFix">					
+								<td><a href="https://csd.XYZ-ignite.com/ICS/bp/home" target="_blank">Ignite</td>
+							</tr>
+							<tr class="rowOddFix">					
+								<td><a href="https://" target="_blank">PCF</td>	
+							</tr>
+						</tbody>
+					</table>
+				</div>	
+			</div>
+			<div id="div1">
+				<div id="tabs-8" style="overflow: auto;">
+					<table style="margin-left:24px; margin-top:47px; width: 250px;" class="fixedTable">
+						<tbody>
+							<tr class="tableHeader">					
+								<th>Misc</th>
+							</tr>
+							<tr class="rowEvenFix">					
+								<td><a href="https://xyz/sites/RMDigita" target="_blank">PCF Spaces Owners</td>		
+							</tr>
+							<tr class="rowOddFix">					
+								<td><a href="https://xyt/login" target="_blank">Splunk - Non-Prod</td>
+							</tr>
+							<tr class="rowEvenFix">					
+								<td><a href="https://xyxgcg/MAO/MAO%20Documents" target="_blank">GCIF MLI</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>	
+			</div>
+		</div> -->
+		<div id="tabs-9" style="overflow: auto;">
+			<table id="supportBasedTable" style="margin-left:25px; width: 950px;" class="fixedTable">
+				<tbody>
+					<tr class="tableHeader">					
+						<th><b>Team Name</b> <BR>(SNOW DL)</th>					
+						<th>Email DL</th>					
+						<th>Main Contacts</th>					
+					</tr>
+					<tr class="rowEvenFix">					
+						<td><b>ESB</b></td>					
+						<td>*GCT US GC ESB Testing and Deployment Support</td>					
+						<td>Agarwal, Ankur4(aa25610xyz) <br> G Vasanth(vg53470@xyz)</td>					
+					</tr>
+					<tr class="rowOddFix">					
+						<td><b>EBS</b></td>					
+						<td>*GCG US USRT EBS-RM BAU</td>					
+						<td>Manne,Sathya (sm17489xyz)</td>					
+					</tr>
+					<tr class="rowEvenFix"> 				
+						<td><b>AOM</b></td>					
+						<td>*GCT US ICC AOM Dev</td>					
+						<td>Jain, Ankit(aj73449xyz)</td>					
+					</tr>
+					<tr class="rowOddFix">					
+						<td><b>FIS</b></td>					
+						<td>*RUSA US FIS BAU RM </td>					
+						<td>Dhanapal, Udayakumar(ud84356xyz)</td>					
+					</tr>
+					<tr class="rowEvenFix">					
+						<td><b>ECLIPSE</b></td>					
+						<td>*GCT US Eclipse AppDev Team </td>					
+						<td>Rajagopalan, Varadarajan (vr55886xyz)</td>					
+					</tr>
+					<tr class="rowOddFix">					
+						<td><b>SALESFORCE</b></td>					
+						<td>*GCT US SF App Dev Blaze <br> *GCB US SF Build Engineering </td>					
+						<td> - <br>Polavarapu, Ratnakar (rp90773xyz)</td>					
+					</tr>
+					<tr class="rowEvenFix">					
+						<td><b>SALESFORCE API</b></td>					
+						<td>*GCB US API SF Dev</td>					
+						<td>Ramachandran, Kiran(kr26498xyz) <br> Pinto, Bryan(bp20071xyz)</td>					
+					</tr>
+					<tr class="rowOddFix">					
+						<td><b>PLATFORM </b><BR> (CTO GL CSS DEV SUPPORT)</td>					
+						<td>*CTO US Platform NGA Dev Support </td>					
+						<td>Janaki, Sathya (sj4@xyz) </td>					
+					</tr>
+					<tr class="rowEvenFix">					
+						<td><b>AVOKA-performance-certification</b></td>					
+						<td>*GCT NAM Avoka-Performance-Certification </td>					
+						<td>Anbazhagan, Kamatchi Sundar(ka53342@xyz) <br> Yelleswarapu, Simdhuri (sy01591xyz) </td>					
+					</tr>
+					<tr class="rowOddFix">					
+						<td><b>XYZscreening</b></td>					
+						<td> SIT <br>CX Development</td>				
+						<td>-</td>					
+					</tr>
+					<tr class="rowEvenFix">					
+						<td><b>POSTING calendar</b></td>					
+						<td>Environment Management </td>					
+						<td>-</td>					
+					</tr>
+					<tr class="rowOddFix">					
+						<td><b>DBA </b><BR> (CTI DS GCPS NAM xyz DB ORACLE)</td>					
+						<td>ORACLE DBA</td>				
+						<td>dddd</td>					
+					</tr>
+					<tr class="rowEvenFix">					
+						<td><b>DM</b></td>					
+						<td Delivery Mgmt Team </td>					
+						<td>xyz</td>					
+					</tr>
+					<tr class="rowOddFix">					
+						<td><b>QA</b></td>					
+						<td> QA Team </td>				
+						<td>dddd <br> Cang, Songyuan  </td>					
+					</tr>
+					<tr class="rowEvenFix">					
+						<td><b>TENANT ops</b> <BR> (CTI NA US GCG L2 TENANT OPS)</td>					
+						<td>NT OPS </td>					
+						<td>-</td>					
+					</tr>
+					<tr class="rowOddFix">					
+						<td><b>PCF</b></td>					
+						<td>NEXTGEN EM </td>				
+						<td>-</td>					
+					</tr>
+					<tr class="rowEvenFix">					
+						<td><b>Environment Support</b></td>					
+						<td>Management </td>					
+						<td>-</td>					
+					</tr>
+					<tr class="rowOddFix">					
+						<td><b>DevOps </b><BR> (GCG NA CTO NAM DEVOPS NEXTGEN)</td>					
+						<td>M DevOps NextGen</td>				
+						<td>-</td>					
+					</tr>
+					<tr class="rowEvenFix">					
+						<td><b>APIM</b></td>					
+						<td> Platform Ops </td>					
+						<td>-</td>					
+					</tr>
+					<tr class="rowOddFix">					
+						<td><b>GCIF</b></td>					
+						<td>*XYZ US GCIF</td>				
+						<td>-</td>					
+					</tr>
+					<tr class="rowEvenFix">					
+						<td><b>XYZ support</b> <BR> (GCG NA 2T US RETAIL XYZ SUPPORT)</td>					
+						<td> Management</td>					
+						<td>-</td>					
+					</tr><tr class="rowOddFix">					
+						<td><b>GATE</b></td>					
+						<td>APIM</td>				
+						<td>-</td>					
+					</tr>
+					<tr class="rowEvenFix">					
+						<td><b>DATA power</b></td>					
+						<td>* Datapower</td>					
+						<td>-</td>					
+					</tr><tr class="rowOddFix">					
+						<td><b>DB Sales</b></td>					
+						<td>*XYZ NAM DBSales </td>				
+						<td>-</td>					
+					</tr>
+					<tr class="rowEvenFix">					
+						<td><b>ROM HOST</b></td>					
+						<td>*XYZ US ROMHOST Dev</td>					
+						<td>-</td>					
+					</tr>
+					<tr class="rowOddFix">					
+						<td><b>Governance team</b></td>					
+						<td> Governance</td>					
+						<td>-</td>					
+					</tr>
+					<tr class="rowEvenFix">					
+						<td><b>CI/CD</b> <BR> (GCG NA APIM PLATFORM OPS) </td>					
+						<td>*PLATFORM </td>					
+						<td>-</td>					
+					</tr>
+					<tr class="rowOddFix">					
+						<td><b>FATCA</b></td>					
+						<td>*DEV </td>					
+						<td>-</td>					
+					</tr>
+					
+					<tr class="rowEvenFix">					
+						<td><b>eSign Dev</b></td>					
+						<td>* Dev </td>					
+						<td>Cfff</td>					
+					</tr>
+					<!--<tr class="rowEvenFix">					
+						<td>GCIF</td>					
+						<td>*XYZ US GCIF</td>					
+						<td  class="XYZflag"><ul><li>Reddy, Mamatha G<!--  [GCB-OT]  [mr57712]</li><li>Thompson, Duke<!--  [GCB-OT] [dt88948]</li></ul></td>					
+					</tr>
+					<tr class="rowOddFix">					
+						<td>ACAPS</td>					
+						<td></td>					
+						<td  class="XYZflag"><ul><li>Selvaraj, Jeyaprince Fernando<!--  [GCB-OT] [JS56630]</li><li>Peine, Julie<!--  [GCB-OT]  [jp78295]</li><li>Traynor, Robert<!--  [GCB-OT]  [rt88902]</li></ul></td>					
+					</tr>
+					<tr class="rowEvenFix">					
+						<td>Database - UAT</td>					
+						<td>*GCT GLOBAL CTO NAM DevOps Oracle</td>					
+						<td><ul><li>Naik, Girish<!--  [GCB-OT NE]  [gn64869]</li></ul></td>					
+					</tr>
+					<tr class="rowOddFix">					
+						<td>Database - PERF, Prod</td>					
+						<td>*CTI NAM GCPS Oracle DBA - eBusiness</td>					
+						<td><ul><li class="XYZflag">Phillips, Lawrence<!--  [CCC-OT] [lp41677]</li></ul></td>					
+					</tr>
+					<tr class="rowEvenFix">					
+						<td>PERF</td>					
+						<td>*GCT US CTO Performance Certification COE</td>					
+						<td><ul><li>Nadimpalli, Raghuram<!--  [GCB-OT NE]  [RN71189]</li><li>Neelakandhan, Rohit<!--  [GCB-OT NE] [rn57241]</li></ul></td>					
+					</tr>
+					<tr class="rowOddFix">					
+						<td>Prod Ops</td>					
+						<td>*CTI US GCG L2 TENANT OPS</td>					
+						<td><ul><li>Bijarapu, Amresh<!--  [CCC-OT NE] [ab10496]</li></ul></td>					
+					</tr>
+					<tr class="rowEvenFix">					
+						<td>Production support</td>					
+						<td>*US Retail Production Management</td>					
+						<td><ul><li>Kantal, Ashim<!--  [GCB-OT NE]  [ak82123]</li></ul></td>					
+					</tr>-->
+				</tbody>			
+			</table>
+		</div>	
+		<div id="tabs-10" style="overflow: auto;">
+			<!--<table id="snowBasedTable" style="margin-left:25px; width: 800px;" class="fixedTable">
+				<tbody>
+					<tr class="tableHeader">					
+						<th>RTC Request/Issues</th>					
+						<th>Type</th>					
+						<th>Templates</th>					
+					</tr>
+					<tr class="rowEvenFix">					
+						<td>Components - Create/Copy</td>					
+						<td>REQ</td>					
+						<td>RTMP0000048589</td>					
+					</tr>
+					<tr class="rowOddFix">					
+						<td>Components - Modify Components - Modify</td>					
+						<td>REQ</td>					
+						<td>RTMP0000048590</td>					
+					</tr>
+					<tr class="rowEvenFix">					
+						<td>Components - Copy across Streams</td>					
+						<td>REQ</td>					
+						<td>RTMP0000048591</td>					
+					</tr>
+					<tr class="rowOddFix">					
+						<td>Access</td>					
+						<td>REQ</td>					
+						<td>RTMP0000048595</td>					
+					</tr>
+					<tr class="rowEvenFix">					
+						<td>RTC Issues</td>					
+						<td>INC</td>					
+						<td>XYZ0000048588</td>					
+					</tr>
+				</tbody>			
+			</table>
+			<br> -->
+			<table id="snowBasedTable" style="margin-left:25px; width: 800px;" class="fixedTable">
+				<tbody>
+					<tr class="tableHeader">					
+						<th>Build Request/Issues</th>					
+						<th>Type</th>					
+						<th>Templates</th>					
+					</tr>
+					<!--<tr class="rowEvenFix">					
+						<td>Build Failures</td>					
+						<td>INC</td>					
+						<td>XYZ0000043953</td>					
+					</tr>
+					<tr class="rowOddFix">					
+						<td>Build access Requests</td>					
+						<td>REQ</td>					
+						<td>RTMP0000043949</td>					
+					</tr>
+					<tr class="rowEvenFix">					
+						<td>Build Set up</td>					
+						<td>REQ</td>					
+						<td>RTMP0000043950</td>					
+					</tr>
+					<tr class="rowOddFix">					
+						<td>Config update requests</td>					
+						<td>REQ</td>					
+						<td>RTMP0000043952</td>					
+					</tr>
+					<tr class="rowEvenFix"></tr>-->
+					<tr class="rowEvenFix">					
+						<td>Incidents for Platform Team</td>					
+						<td>INC</td>					
+						<td>XYZ0000052461</td>					
+					</tr>
+					<tr class="rowOddFix">					
+						<td>NAM DevOps NextGen Deployment and Configuration - Dev, UAT</td>					
+						<td>REQ</td>					
+						<td>RTMP0000044899</td>					
+					</tr>
+					<tr class="rowEvenFix">
+						<td>Code Drop Deployments (Major release)</td>					
+						<td>CHG</td>					
+						<td>XYZ0000047177</td>	
+					</tr>
+					<tr class="rowOddFix">					
+						<td>Minor release Deployments</td>					
+						<td>CHG</td>					
+						<td>XYZ0000046377</td>					
+					</tr>
+					<tr class="rowEvenFix">					
+						<td>UAT Deployment</td>					
+						<td>CHG</td>					
+						<td>XYZ0000068319</td>					
+					</tr>
+					<tr class="rowOddFix">
+						<td>XYZ Deployment</td>					
+						<td>CHG</td>					
+						<td>XYZ0000069673</td>	
+					</tr>
+					<tr class="rowEvenFix">					
+						<td>DB Task - UAT - Deployment</td>					
+						<td>CTSK</td>					
+						<td>XYZ0000004921</td>					
+					</tr>
+					<tr class="rowOddFix">					
+						<td>DB Task - UAT - Data Refresh</td>					
+						<td>CTSK</td>					
+						<td>XYZ0000004927</td>					
+					</tr>
+					<tr class="rowEvenFix">					
+						<td>DB Task - PERF XYZ - Deployment</td>					
+						<td>CTSK</td>					
+						<td>XYZ0000018740</td>					
+					</tr>
+					<tr class="rowOddFix">					
+						<td>DB Task - PERF XYZ - Data Refresh</td>					
+						<td>CTSK</td>					
+						<td>XYZ0000018741</td>					
+					</tr>
+					<tr class="rowEvenFix">					
+						<td>Database Create FID</td>					
+						<td>CTSK</td>					
+						<td>XYZ0000041655</td>					
+					</tr>
+					<tr class="rowOddFix">					
+						<td>Database Modify FID</td>					
+						<td>CTSK</td>					
+						<td>XYZ0000041656</td>					
+					</tr>
+				</tbody>			
+			</table>
+		</div>	
+	</div>
+</section>
+
+<section id="contactUsMainTab" class="tab-content hide">
+	<div style="margin-left:25px;margin-top:25px;">
+	<table border="0" width="40%" align="left">
+	<tr class="rowEvenFix"><td>Owner: </td><td><a href="mailto: dl.com">ssnegi</a></td></tr>
+	<tr class="rowOddFix"><td rowspan="2">Distribution List: </td>
+	<td>
+	<a href="mailto:dl.com">API DL</a>
+	</td> </tr>
+	<!--<tr class="rowEvenFix"><td><a href="mailto:dl.com">*GCT NAM USRT AVOKA API</a></td></tr> -->
+</section>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script> // Script for menu start
+   $(document).ready(function() {
+      $('#cssmenu').prepend('<div id="bg-one"></div><div id="bg-two"></div><div id="bg-three"></div><div id="bg-four"></div>');
+      $('#cssmenu .nav-tabs > li > a').click(function(event){
+
+      event.preventDefault();//stop browser to take action for clicked anchor
+
+      //get displaying tab content jQuery selector
+      var active_tab_selector = $('#cssmenu > .nav-tabs > li.active > a').attr('href');
+
+      //find actived navigation and remove 'active' css
+      var actived_nav = $('.nav-tabs > li.active');
+      actived_nav.removeClass('active');
+
+      //add 'active' css into clicked navigation
+      $(this).parents('li').addClass('active');
+
+      //hide displaying tab content
+      $(active_tab_selector).removeClass('active');
+      $(active_tab_selector).addClass('hide');
+
+      //show target tab content
+      var target_tab_selector = $(this).attr('href');
+      $(target_tab_selector).removeClass('hide');
+      $(target_tab_selector).addClass('active');
+        });
+		
+		//Script for Environment Configuration start
+		jQuery('#environmentConfiguration').tabs();
+		jQuery('#envPlanDiv').tabs();
+		jQuery('#pcfMicroServicesTab').tabs();
+		jQuery('#referencesMainTab').tabs();
+		<!-- jQuery('#pcfMicroServicesDiv').tabs(); -->
+		jQuery('#tabs1').tabs();
+		jQuery('#tabs2').tabs();
+		jQuery('#tabs3').tabs();
+		jQuery('#tabs4').tabs();
+		jQuery('#tabs5').tabs();
+		jQuery('#tabs6').tabs();
+		jQuery('#tabs7').tabs();
+		jQuery('#tabs8').tabs();
+		jQuery('#tabs9').tabs();
+		jQuery('#tabs10').tabs();
+		
+		jQuery('#devBasedTable').hide();
+		//jQuery('#sitBasedTable').hide();
+		jQuery('#uatBasedTable').hide();
+		jQuery('#perfBasedTable').hide();
+		jQuery('#prodBasedTable').hide();
+		jQuery('#devBasedTable1').show();
+		jQuery('#uatBasedTable1').hide();
+		jQuery('#perfBasedTable1').hide();
+		jQuery('#prodBasedTable1').hide();
+/*
+jQuery('#dev').click(function(){
+	jQuery('#devBasedTable').show();
+	//jQuery('#sitBasedTable').hide();
+	jQuery('#uatBasedTable').hide();
+	jQuery('#perfBasedTable').hide();
+	jQuery('#prodBasedTable').hide();
+	jQuery('#devBasedTable1').hide();
+	jQuery('#uatBasedTable1').hide();
+	jQuery('#perfBasedTable1').hide();
+	jQuery('#prodBasedTable1').hide();
+}); 
+
+ jQuery('#sit').click(function(){
+	jQuery('#devBasedTable').hide();
+	jQuery('#sitBasedTable').show();
+	jQuery('#uatBasedTable').hide();
+	jQuery('#perfBasedTable').hide();
+	jQuery('#prodBasedTable').hide();
+});
+ 
+ jQuery('#uat').click(function(){
+		jQuery('#devBasedTable').hide();
+		//jQuery('#sitBasedTable').hide();
+		jQuery('#uatBasedTable').show();
+		jQuery('#perfBasedTable').hide();
+		jQuery('#prodBasedTable').hide();
+		jQuery('#devBasedTable1').hide();
+		jQuery('#uatBasedTable1').hide();
+		jQuery('#perfBasedTable1').hide();
+		jQuery('#prodBasedTable1').hide();
+	}); 
+ 
+ jQuery('#perf').click(function(){
+		jQuery('#devBasedTable').hide();
+		//jQuery('#sitBasedTable').hide();
+		jQuery('#uatBasedTable').hide();
+		jQuery('#perfBasedTable').show();
+		jQuery('#prodBasedTable').hide();
+		jQuery('#devBasedTable1').hide();
+		jQuery('#uatBasedTable1').hide();
+		jQuery('#perfBasedTable1').hide();
+		jQuery('#prodBasedTable1').hide();
+	}); 
+ 
+ jQuery('#prod').click(function(){
+		jQuery('#devBasedTable').hide();
+		//jQuery('#sitBasedTable').hide();
+		jQuery('#uatBasedTable').hide();
+		jQuery('#perfBasedTable').hide();
+		jQuery('#prodBasedTable').show();
+		jQuery('#devBasedTable1').hide();
+		jQuery('#uatBasedTable1').hide();
+		jQuery('#perfBasedTable1').hide();
+		jQuery('#prodBasedTable1').hide();
+	});*/
+
+jQuery('#dev1').click(function(){
+	jQuery('#devBasedTable').hide();
+	//jQuery('#sitBasedTable').hide();
+	jQuery('#uatBasedTable').hide();
+	jQuery('#perfBasedTable').hide();
+	jQuery('#prodBasedTable').hide();
+	jQuery('#devBasedTable1').show();
+	jQuery('#uatBasedTable1').hide();
+	jQuery('#perfBasedTable1').hide();
+	jQuery('#prodBasedTable1').hide();
+}); 
+
+jQuery('#uat1').click(function(){
+	jQuery('#devBasedTable').hide();
+	//jQuery('#sitBasedTable').hide();
+	jQuery('#uatBasedTable').hide();
+	jQuery('#perfBasedTable').hide();
+	jQuery('#prodBasedTable').hide();
+	jQuery('#devBasedTable1').hide();
+	jQuery('#uatBasedTable1').show();
+	jQuery('#perfBasedTable1').hide();
+	jQuery('#prodBasedTable1').hide();
+}); 
+jQuery('#perf1').click(function(){
+	jQuery('#devBasedTable').hide();
+	//jQuery('#sitBasedTable').hide();
+	jQuery('#uatBasedTable').hide();
+	jQuery('#perfBasedTable').hide();
+	jQuery('#prodBasedTable').hide();
+	jQuery('#devBasedTable1').hide();
+	jQuery('#uatBasedTable1').hide();
+	jQuery('#perfBasedTable1').show();
+	jQuery('#prodBasedTable1').hide();
+}); 
+jQuery('#prod1').click(function(){
+	jQuery('#devBasedTable').hide();
+	//jQuery('#sitBasedTable').hide();
+	jQuery('#uatBasedTable').hide();
+	jQuery('#perfBasedTable').hide();
+	jQuery('#prodBasedTable').hide();
+	jQuery('#devBasedTable1').hide();
+	jQuery('#uatBasedTable1').hide();
+	jQuery('#perfBasedTable1').hide();
+	jQuery('#prodBasedTable1').show();
+}); 
+
+
+
+
+
+
+	
+	 jQuery('#microservice').click(function(){
+		jQuery('#microserviceBasedTable').show();
+		jQuery('#microappsBasedTable').hide();
+	}); 
+	 jQuery('#microapps').click(function(){
+		jQuery('#microserviceBasedTable').hide();
+		jQuery('#microappsBasedTable').show();
+	});
+	 jQuery('#links').click(function(){
+		jQuery('#linksBasedTable').show();
+		jQuery('#supportBasedTable').hide();
+		jQuery('#snowBasedTable').hide();
+	}); 
+	 jQuery('#support').click(function(){
+		jQuery('#linksBasedTable').hide();
+		jQuery('#supportBasedTable').show();
+		jQuery('#snowBasedTable').hide();
+	}); 
+	 jQuery('#snow').click(function(){
+		jQuery('#linksBasedTable').hide();
+		jQuery('#supportBasedTable').hide();
+		jQuery('#snowBasedTable').show();
+	}); 
+    });
+   </script> 
+
+</body>
+</html>
